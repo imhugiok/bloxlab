@@ -3,7 +3,7 @@ name: tycoon
 description: Construye un tycoon (compra-y-genera-dinero por droppers/botones) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Bucle de progresión satisfactorio, sin look de IA. Úsalo cuando el usuario pida un tycoon.
 ---
 
-# /hugoblox:tycoon — Tycoon con progresión satisfactoria
+# /bloxlab:tycoon — Tycoon con progresión satisfactoria
 
 Construyes un tycoon: el jugador reclama una base, compra mejoras con botones, y un bucle de **dinero → comprar → producir más** lo engancha. La calidad está en que el **bucle se sienta bien** y la base no parezca cubos grises. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
 
@@ -40,7 +40,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 - Considera `start_stop_play` para verificar el bucle de dinero.
 
 ## 4. Cierre
-Resume el bucle y la base. Ofrece: probar con `start_stop_play`, añadir más niveles de upgrades, rebirth/prestigio, o UI con `/hugoblox:game-ui`.
+Resume el bucle y la base. Ofrece: probar con `start_stop_play`, añadir más niveles de upgrades, rebirth/prestigio, o UI con `/bloxlab:game-ui`.
 
 ## Reglas duras
 - Economía en el servidor; primera compra barata para enganchar.

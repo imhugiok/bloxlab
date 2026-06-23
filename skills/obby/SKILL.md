@@ -3,7 +3,7 @@ name: obby
 description: Construye un obby (carrera de obstáculos/parkour) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Dificultad justa, checkpoints, sin look de IA. Úsalo cuando el usuario pida un obby, parkour o curso de obstáculos.
 ---
 
-# /hugoblox:obby — Carrera de obstáculos justa y divertida
+# /bloxlab:obby — Carrera de obstáculos justa y divertida
 
 Construyes un obby con **game feel justo**: retador pero nunca tramposo, con progresión clara y checkpoints. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`): nada de retícula plana y gris; tema, color y ritmo intencionales.
 

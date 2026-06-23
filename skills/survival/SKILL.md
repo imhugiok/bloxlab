@@ -3,7 +3,7 @@ name: survival
 description: Construye un juego de supervivencia (recolectar, craftear, resistir amenazas) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Mundo con tensión y bucle claro, sin look de IA. Úsalo cuando el usuario pida survival, supervivencia o crafteo.
 ---
 
-# /hugoblox:survival — Supervivencia con tensión y bucle claro
+# /bloxlab:survival — Supervivencia con tensión y bucle claro
 
 Construyes un survival: el jugador recolecta recursos, craftea/mejora, y resiste una amenaza (hambre, frío, noche, enemigos, desastre). La calidad está en el **bucle de tensión-alivio y un mundo creíble** (no un terreno plano vacío). Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
 
@@ -29,8 +29,8 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 1. `get_studio_state`. Trabaja en `Workspace/Survival_<bioma>` (y terreno si aplica).
 2. **Mundo:** relieve con `Terrain` o partes, vegetación/rocas/agua, puntos de interés. Tema y luz del bioma. Variedad, no retícula.
 3. **Recursos (execute_luau):** nodos recolectables (`.Touched`/herramienta) que dan materiales y reaparecen; inventario simple (leaderstats o folder por jugador).
-4. **Crafteo:** estación o menú que convierte materiales en herramientas/estructuras (puedes apoyarte en `/hugoblox:game-ui`).
-5. **Amenaza:** ciclo día/noche (`Lighting.ClockTime` animado), y/o stat de hambre/frío que baja y daña si llega a 0, y/o enemigos NPC de noche (`/hugoblox:npc`).
+4. **Crafteo:** estación o menú que convierte materiales en herramientas/estructuras (puedes apoyarte en `/bloxlab:game-ui`).
+5. **Amenaza:** ciclo día/noche (`Lighting.ClockTime` animado), y/o stat de hambre/frío que baja y daña si llega a 0, y/o enemigos NPC de noche (`/bloxlab:npc`).
 6. **Refugio/fuego:** colocar estructuras y una hoguera que restaura/ahuyenta como recompensa al progreso.
 
 ## 3. Checklist técnico (aplica siempre)
@@ -41,7 +41,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 - Considera `start_stop_play` para sentir el ciclo.
 
 ## 4. Cierre
-Resume mundo, bucle y amenaza. Ofrece: probar con `start_stop_play`, más recursos/crafteos, enemigos (`/hugoblox:npc`), o UI (`/hugoblox:game-ui`).
+Resume mundo, bucle y amenaza. Ofrece: probar con `start_stop_play`, más recursos/crafteos, enemigos (`/bloxlab:npc`), o UI (`/bloxlab:game-ui`).
 
 ## Reglas duras
 - Bucle de tensión-alivio claro; presión constante pero justa.

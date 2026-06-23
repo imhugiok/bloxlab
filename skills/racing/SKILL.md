@@ -3,7 +3,7 @@ name: racing
 description: Construye un juego de carreras (pista con vueltas, checkpoints, vehículos) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Pista con buen trazado y game feel, sin look de IA. Úsalo cuando el usuario pida un juego de carreras o racing.
 ---
 
-# /hugoblox:racing — Carreras con buen trazado
+# /bloxlab:racing — Carreras con buen trazado
 
 Construyes una carrera: una pista con trazado interesante, checkpoints, vueltas y meta. La calidad está en el **trazado** (curvas que se sientan bien, no un óvalo plano) y la lectura de la pista. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
 
@@ -41,7 +41,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 - Considera `start_stop_play` para sentir una vuelta.
 
 ## 4. Cierre
-Resume pista, checkpoints y vehículo. Ofrece: probar con `start_stop_play`, más sectores/circuitos, power-ups, o UI/cronómetro (`/hugoblox:game-ui`).
+Resume pista, checkpoints y vehículo. Ofrece: probar con `start_stop_play`, más sectores/circuitos, power-ups, o UI/cronómetro (`/bloxlab:game-ui`).
 
 ## Reglas duras
 - Trazado con variedad y dirección legible; nunca un óvalo plano gris.

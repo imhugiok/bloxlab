@@ -3,7 +3,7 @@ name: roleplay-town
 description: Construye un mundo de roleplay/town (pueblo o ciudad habitable estilo Brookhaven/Bloxburg) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Lugares con vida, sin look de IA. Úsalo cuando el usuario pida roleplay, town, ciudad o mundo social.
 ---
 
-# /hugoblox:roleplay-town — Pueblo/ciudad habitable para roleplay
+# /bloxlab:roleplay-town — Pueblo/ciudad habitable para roleplay
 
 Construyes un mundo social: casas, tiendas, calles y puntos de interés donde la gente "vive" y juega roles. La calidad está en que se sienta **un lugar real y acogedor con vida**, no edificios-caja repetidos. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
 
@@ -41,7 +41,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 - Considera `start_stop_play` para caminarlo.
 
 ## 4. Cierre
-Resume el town y sus puntos de interés. Ofrece: probar con `start_stop_play`, más edificios/interiores, NPCs que lo habiten (`/hugoblox:npc`), o sistemas/UI (`/hugoblox:game-ui`).
+Resume el town y sus puntos de interés. Ofrece: probar con `start_stop_play`, más edificios/interiores, NPCs que lo habiten (`/bloxlab:npc`), o sistemas/UI (`/bloxlab:game-ui`).
 
 ## Reglas duras
 - Variedad sí o sí: edificios y props distintos, composición con jerarquía, nunca grid de clones.

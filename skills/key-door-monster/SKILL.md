@@ -3,9 +3,9 @@ name: key-door-monster
 description: Implementa un sistema de objetivo (llaves, puertas, monstruo/amenaza y meta) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Da gameplay y tensión a un mapa existente. Úsalo cuando el usuario pida llaves, puertas, monstruo, objetivo o "loop" de escape.
 ---
 
-# /hugoblox:key-door-monster — Sistema de objetivo y tensión
+# /bloxlab:key-door-monster — Sistema de objetivo y tensión
 
-Implementas el bucle clásico que convierte un mapa en un JUEGO: busca llaves → abre puertas → evita/sobrevive a una amenaza → llega a la meta. Ideal para sumarlo a un `/hugoblox:horror-map`, `/hugoblox:backrooms` o cualquier mapa. La calidad está en **tensión justa, feedback claro y reglas legibles**. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Implementas el bucle clásico que convierte un mapa en un JUEGO: busca llaves → abre puertas → evita/sobrevive a una amenaza → llega a la meta. Ideal para sumarlo a un `/bloxlab:horror-map`, `/bloxlab:backrooms` o cualquier mapa. La calidad está en **tensión justa, feedback claro y reglas legibles**. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:
@@ -29,9 +29,9 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme. 
 1. `get_studio_state`. Si hay mapa, identifícalo (`search_game_tree`/`inspect_instance`). Trabaja en una carpeta del sistema (ej. `Workspace/<Mapa>/Objective`).
 2. **Llaves (execute_luau):** objetos recolectables (`.Touched`/prompt) que suman a un contador por jugador; feedback al recoger.
 3. **Puertas:** requieren la(s) llave(s); al cumplir, se abren (tween/CanCollide) con sonido; bloquean si falta.
-4. **Amenaza/monstruo:** un NPC que patrulla/persigue (apóyate en `/hugoblox:npc`) o una trampa/tiempo. Detección y daño/captura en server; telegrafía con audio/luz.
+4. **Amenaza/monstruo:** un NPC que patrulla/persigue (apóyate en `/bloxlab:npc`) o una trampa/tiempo. Detección y daño/captura en server; telegrafía con audio/luz.
 5. **Meta:** zona final que valida objetivo completo y dispara victoria (UI, sonido); opcional cronómetro/score.
-6. **Feedback/UI:** contador de llaves y objetivo en pantalla (apóyate en `/hugoblox:game-ui`).
+6. **Feedback/UI:** contador de llaves y objetivo en pantalla (apóyate en `/bloxlab:game-ui`).
 
 ## 3. Checklist técnico (aplica siempre)
 - Carpeta nombrada; no borres el mapa/trabajo del usuario; ChangeHistory waypoints.
@@ -42,7 +42,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme. 
 - Considera `start_stop_play` para jugar el bucle (¿es justo y tenso?).
 
 ## 4. Cierre
-Resume el bucle montado (llaves/puertas/amenaza/meta) y dónde. Ofrece: probar con `start_stop_play`, afinar dificultad, más llaves/puertas, o mejorar el monstruo (`/hugoblox:npc`).
+Resume el bucle montado (llaves/puertas/amenaza/meta) y dónde. Ofrece: probar con `start_stop_play`, afinar dificultad, más llaves/puertas, o mejorar el monstruo (`/bloxlab:npc`).
 
 ## Reglas duras
 - Objetivo siempre legible; amenaza tensa pero evitable; victoria con feedback.

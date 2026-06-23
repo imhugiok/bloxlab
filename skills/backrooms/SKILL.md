@@ -3,7 +3,7 @@ name: backrooms
 description: Construye un nivel tipo Backrooms (liminal, infinito, inquietante) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Sin look de IA. Úsalo cuando el usuario pida backrooms, espacios liminales o pasillos infinitos.
 ---
 
-# /hugoblox:backrooms — Nivel liminal de Backrooms
+# /bloxlab:backrooms — Nivel liminal de Backrooms
 
 Construyes un espacio liminal (vacío, repetitivo, "mal") que da desasosiego, en el Studio abierto, vía el MCP oficial `Roblox_Studio`. El miedo aquí es la **monotonía inquietante y la desorientación**, no los sustos. Aplica los principios anti-AI-slop (en `knowledge/anti-ai-slop.md`): escala humana, color con intención, auto-revisión.
 
@@ -40,7 +40,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 - Auto-revisión: `screen_capture`, critica vs anti-slop (¿se siente liminal y legible?), corrige, repite (2-4 pasadas).
 
 ## 4. Cierre
-Resume qué construiste y dónde. Ofrece: probar con `start_stop_play`, ampliar el laberinto, o añadir una entidad/persecución (con `/hugoblox:key-door-monster` o `/hugoblox:npc`).
+Resume qué construiste y dónde. Ofrece: probar con `start_stop_play`, ampliar el laberinto, o añadir una entidad/persecución (con `/bloxlab:key-door-monster` o `/bloxlab:npc`).
 
 ## Reglas duras
 - Una sección/sector a la vez, no un nivel infinito de un tiro (usa repetición modular para dar esa ilusión).

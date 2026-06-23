@@ -1,10 +1,10 @@
 <!-- Hero image TODO: add assets/hero.png and uncomment
 <p align="center">
-  <img src="https://raw.githubusercontent.com/imhugiok/hugoblox/main/assets/hero.png" alt="HugoBlox — quality Roblox game-building skills for Claude Code" width="840">
+  <img src="https://raw.githubusercontent.com/imhugiok/bloxlab/main/assets/hero.png" alt="Bloxlab — quality Roblox game-building skills for Claude Code" width="840">
 </p>
 -->
 
-<h1 align="center">HugoBlox</h1>
+<h1 align="center">Bloxlab</h1>
 
 <p align="center">
   <strong>Quality game-building skills for Roblox — as a Claude Code plugin.</strong><br>
@@ -19,7 +19,7 @@
   <img src="https://img.shields.io/badge/skills-14-7c5cff.svg" alt="14 skills">
 </p>
 
-> **The engine is solved — taste isn't.** Roblox already ships a first-party AI assistant and an official MCP that can run code, generate meshes/materials, and search assets. What it *can't* do is make the result feel designed. HugoBlox is that missing **quality layer**.
+> **The engine is solved — taste isn't.** Roblox already ships a first-party AI assistant and an official MCP that can run code, generate meshes/materials, and search assets. What it *can't* do is make the result feel designed. Bloxlab is that missing **quality layer**.
 
 🇪🇸 *Resumen en español al final.*
 
@@ -29,13 +29,13 @@
 
 Roblox's native AI builder (and its official `Roblox_Studio` MCP) already handle the plumbing — and the generative parts (meshes, materials, 3D models) run in Roblox's cloud, so no third-party tool can beat them there. The gap is **taste**: native output looks generic and templated.
 
-HugoBlox doesn't rebuild the engine. It adds per-genre **game-design knowledge** + an **anti-AI-slop checklist** + a build recipe, so what gets built looks intentional, not auto-generated.
+Bloxlab doesn't rebuild the engine. It adds per-genre **game-design knowledge** + an **anti-AI-slop checklist** + a build recipe, so what gets built looks intentional, not auto-generated.
 
 ```text
 You (a prompt in Claude Code)
    → Claude            the brain
    → Roblox_Studio MCP the hands (run code · generate · search assets)
-   → HugoBlox skills    the taste (how to make it actually good)
+   → Bloxlab skills    the taste (how to make it actually good)
    → your open Roblox Studio
 ```
 
@@ -52,8 +52,8 @@ No API keys required — Claude Code is the brain.
 **As a Claude Code plugin:**
 
 ```text
-/plugin marketplace add imhugiok/hugoblox
-/plugin install hugoblox@hugoblox
+/plugin marketplace add imhugiok/bloxlab
+/plugin install bloxlab@bloxlab
 /reload-plugins
 ```
 
@@ -61,7 +61,7 @@ Local development (from a cloned/working folder):
 
 ```text
 /plugin marketplace add <path-to-this-folder>
-/plugin install hugoblox@hugoblox
+/plugin install bloxlab@bloxlab
 /reload-plugins
 ```
 
@@ -70,9 +70,9 @@ Local development (from a cloned/working folder):
 Open Roblox Studio on a **test place**, then in Claude Code run any skill:
 
 ```text
-/hugoblox:horror-map
-/hugoblox:backrooms
-/hugoblox:obby
+/bloxlab:horror-map
+/bloxlab:backrooms
+/bloxlab:obby
 ```
 
 Every skill **asks what you want first** — then builds and **self-reviews with screenshots** before calling it done.
@@ -121,7 +121,7 @@ Every skill follows the same quality bar ([full list](knowledge/anti-ai-slop.md)
 
 ```text
 .claude-plugin/   plugin.json + marketplace.json
-skills/           14 skills → /hugoblox:<name>
+skills/           14 skills → /bloxlab:<name>
 knowledge/        anti-ai-slop.md, intake.md (shared rules)
 docs/             design notes (quality-layer-plan.md)
 ```
@@ -144,13 +144,13 @@ Built by **Hugo Rivera** ([@imhugiok](https://github.com/imhugiok)) — making i
 
 ## 🇪🇸 Resumen (Español)
 
-**HugoBlox** es un plugin de **Claude Code** con skills que construyen **juegos de Roblox de calidad a partir de un prompt** — sin el look genérico de IA. Escribes algo como `/hugoblox:horror-map`, Claude **te pregunta qué quieres**, y lo construye en tu Roblox Studio abierto.
+**Bloxlab** es un plugin de **Claude Code** con skills que construyen **juegos de Roblox de calidad a partir de un prompt** — sin el look genérico de IA. Escribes algo como `/bloxlab:horror-map`, Claude **te pregunta qué quieres**, y lo construye en tu Roblox Studio abierto.
 
-- **Cómo funciona:** Claude (cerebro) + el **MCP oficial `Roblox_Studio`** (las manos: ejecuta código, genera mallas/materiales/modelos, busca assets) + los skills de HugoBlox (el buen gusto). **Sin API keys** — el cerebro es Claude Code.
-- **Por qué:** la plomería y la generación ya las resuelve Roblox; lo que falta es la **calidad/taste**. Eso es HugoBlox.
+- **Cómo funciona:** Claude (cerebro) + el **MCP oficial `Roblox_Studio`** (las manos: ejecuta código, genera mallas/materiales/modelos, busca assets) + los skills de Bloxlab (el buen gusto). **Sin API keys** — el cerebro es Claude Code.
+- **Por qué:** la plomería y la generación ya las resuelve Roblox; lo que falta es la **calidad/taste**. Eso es Bloxlab.
 - **Requisitos:** Roblox Studio con su MCP activado y conectado a Claude Code + este plugin.
-- **Instalar:** `/plugin marketplace add imhugiok/hugoblox` → `/plugin install hugoblox@hugoblox` → `/reload-plugins`.
-- **Usar:** abre Studio en un lugar de prueba y corre, p. ej., `/hugoblox:horror-map`. Cada skill **pregunta primero** (ya tengo idea / un tema / lluvia de ideas / sorpréndeme / solo probando / planear) y **se autorrevisa con capturas** antes de terminar.
+- **Instalar:** `/plugin marketplace add imhugiok/bloxlab` → `/plugin install bloxlab@bloxlab` → `/reload-plugins`.
+- **Usar:** abre Studio en un lugar de prueba y corre, p. ej., `/bloxlab:horror-map`. Cada skill **pregunta primero** (ya tengo idea / un tema / lluvia de ideas / sorpréndeme / solo probando / planear) y **se autorrevisa con capturas** antes de terminar.
 - **14 skills:** terror, backrooms, obby, tycoon, simulator (incl. brainrot), shooter, tower-defense, survival, racing, roleplay-town, escape-room + sistemas (game-ui, key-door-monster, npc).
 
 Regla anti-slop en [`knowledge/anti-ai-slop.md`](knowledge/anti-ai-slop.md). Hecho con cariño por Hugo. MIT.

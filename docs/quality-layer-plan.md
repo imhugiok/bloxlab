@@ -33,27 +33,27 @@ Agentes: `subagent`, `skill`.
 Todos empiezan con el **intake obligatorio** (`knowledge/intake.md`): preguntan qué quiere el usuario antes de construir (ya tengo algo en mente / un tema / lluvia de ideas / sorpréndeme / solo probando / planear primero). Y todos citan `knowledge/anti-ai-slop.md`.
 
 Modos de juego:
-- `/hugoblox:horror-map` — mapa de terror con atmósfera real.
-- `/hugoblox:backrooms` — liminal/infinito, luz fluorescente sucia.
-- `/hugoblox:obby` — obstáculos justos, progresión, checkpoints.
-- `/hugoblox:tycoon` — bucle comprar→producir→crecer.
-- `/hugoblox:simulator` — recolectar/click/grind, zonas, mascotas (incl. brainrot).
-- `/hugoblox:shooter` — mapa con flujo de combate (+ disparo básico opcional).
-- `/hugoblox:tower-defense` — oleadas por un camino, torres con roles.
-- `/hugoblox:survival` — recolectar/craftear/resistir, tensión-alivio.
-- `/hugoblox:racing` — pista con buen trazado, checkpoints, vueltas.
-- `/hugoblox:roleplay-town` — pueblo/ciudad habitable con vida.
-- `/hugoblox:escape-room` — puzzles justos encadenados.
+- `/bloxlab:horror-map` — mapa de terror con atmósfera real.
+- `/bloxlab:backrooms` — liminal/infinito, luz fluorescente sucia.
+- `/bloxlab:obby` — obstáculos justos, progresión, checkpoints.
+- `/bloxlab:tycoon` — bucle comprar→producir→crecer.
+- `/bloxlab:simulator` — recolectar/click/grind, zonas, mascotas (incl. brainrot).
+- `/bloxlab:shooter` — mapa con flujo de combate (+ disparo básico opcional).
+- `/bloxlab:tower-defense` — oleadas por un camino, torres con roles.
+- `/bloxlab:survival` — recolectar/craftear/resistir, tensión-alivio.
+- `/bloxlab:racing` — pista con buen trazado, checkpoints, vueltas.
+- `/bloxlab:roleplay-town` — pueblo/ciudad habitable con vida.
+- `/bloxlab:escape-room` — puzzles justos encadenados.
 
 Sistemas (piezas para cualquier juego):
-- `/hugoblox:game-ui` — HUD/menús/tiendas/diálogos que no se ven genéricos.
-- `/hugoblox:key-door-monster` — sistema de objetivo (llaves, puertas, amenaza, meta).
-- `/hugoblox:npc` — NPCs con comportamiento (vendedor, guía, enemigo, fauna).
+- `/bloxlab:game-ui` — HUD/menús/tiendas/diálogos que no se ven genéricos.
+- `/bloxlab:key-door-monster` — sistema de objetivo (llaves, puertas, amenaza, meta).
+- `/bloxlab:npc` — NPCs con comportamiento (vendedor, guía, enemigo, fauna).
 
 Futuro posible: más géneros (clicker puro, plataformas 2.5D, fishing, cooking), y sub-skills (lighting-mood, terrain, sound-design).
 
 ## Workflow para usar/actualizar skills
-- Los skills viven en el repo (`skills/`) y se empaquetan en el plugin `hugoblox`.
+- Los skills viven en el repo (`skills/`) y se empaquetan en el plugin `bloxlab`.
 - Al instalar, Claude Code **copia** el plugin a su caché; **no se auto-actualiza**. Tras agregar/editar skills: subir versión en `.claude-plugin/plugin.json`, y en Claude Code correr la actualización del plugin (`/plugin`) + `/reload-plugins`.
 - Para PROBAR un skill no hace falta instalarlo: se sigue su `SKILL.md` y se usa el MCP oficial directo.
 

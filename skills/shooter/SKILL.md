@@ -3,7 +3,7 @@ name: shooter
 description: Construye un shooter (FPS/TPS o arena de combate) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Mapa con buen flujo de combate y game feel, sin look de IA. Úsalo cuando el usuario pida un shooter, FPS, PVP o arena de combate.
 ---
 
-# /hugoblox:shooter — Shooter con buen flujo de combate
+# /bloxlab:shooter — Shooter con buen flujo de combate
 
 Construyes un shooter centrado en un **mapa con buen flujo** (cobertura, sightlines, rutas) y, si se pide, mecánica de disparo básica. La calidad está en el **diseño de combate** (no una caja plana) y el game feel. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
 
@@ -41,7 +41,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 - Considera `start_stop_play` para sentir el flujo.
 
 ## 4. Cierre
-Resume mapa/modo. Ofrece: probar con `start_stop_play`, añadir armas/modo, NPCs enemigos (`/hugoblox:npc`), o UI/HUD (`/hugoblox:game-ui`).
+Resume mapa/modo. Ofrece: probar con `start_stop_play`, añadir armas/modo, NPCs enemigos (`/bloxlab:npc`), o UI/HUD (`/bloxlab:game-ui`).
 
 ## Reglas duras
 - Mapa con cobertura, rutas múltiples y verticalidad; nunca una caja plana.

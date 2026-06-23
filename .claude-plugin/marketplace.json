@@ -1,13 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-marketplace.json",
-  "name": "hugoblox",
+  "name": "bloxlab",
   "owner": {
-    "name": "Hugo"
+    "name": "Hugo Rivera"
   },
-  "description": "HugoBlox - skills para construir juegos de Roblox de calidad con IA.",
+  "description": "Bloxlab - skills para construir juegos de Roblox de calidad con IA.",
   "plugins": [
     {
-      "name": "hugoblox",
+      "name": "bloxlab",
       "source": "./",
       "description": "Skills que construyen juegos de Roblox de calidad (sin look de IA) vía el MCP oficial de Roblox Studio.",
       "version": "0.2.0",

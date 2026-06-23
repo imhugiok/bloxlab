@@ -3,7 +3,7 @@ name: tower-defense
 description: Construye un tower defense (oleadas de enemigos por un camino, torres que defienden) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Sin look de IA. Úsalo cuando el usuario pida un tower defense o TD.
 ---
 
-# /hugoblox:tower-defense — Tower Defense con buen ritmo
+# /bloxlab:tower-defense — Tower Defense con buen ritmo
 
 Construyes un TD: enemigos avanzan por un camino hacia una base; el jugador coloca torres con su dinero para detenerlos por oleadas. La calidad está en el **ritmo de oleadas, el balance y un mapa con identidad** (no un camino gris en zigzag plano). Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
 
@@ -31,7 +31,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 3. **Enemigos (execute_luau):** modelos con `Humanoid` que recorren los waypoints (`MoveTo`) hacia la base; al llegar restan vidas. Salud por tipo.
 4. **Oleadas:** server script que genera oleadas con delays crecientes y mezcla de tipos; anuncia la oleada.
 5. **Torres:** colocación en zonas válidas (pad/grid), que detectan enemigos en rango y disparan (daño en server), con costo/mejora. Empieza con 1-2 tipos.
-6. **Economía/UI:** `leaderstats` con dinero; HUD con vidas/oleada (puedes apoyarte en `/hugoblox:game-ui`).
+6. **Economía/UI:** `leaderstats` con dinero; HUD con vidas/oleada (puedes apoyarte en `/bloxlab:game-ui`).
 
 ## 3. Checklist técnico (aplica siempre)
 - Carpeta nombrada; no borres lo del usuario; ChangeHistory waypoints.
@@ -41,7 +41,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 - Considera `start_stop_play` para ver una oleada.
 
 ## 4. Cierre
-Resume mapa, oleadas y torres. Ofrece: probar con `start_stop_play`, más torres/enemigos/oleadas, jefe, o UI con `/hugoblox:game-ui`.
+Resume mapa, oleadas y torres. Ofrece: probar con `start_stop_play`, más torres/enemigos/oleadas, jefe, o UI con `/bloxlab:game-ui`.
 
 ## Reglas duras
 - Camino y zonas de construcción siempre legibles; oleadas con ritmo creciente.

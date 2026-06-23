@@ -3,7 +3,7 @@ name: simulator
 description: Construye un simulator (recolecta/click/grind para subir stats y mascotas) de CALIDAD en el Roblox Studio abierto, vía el MCP oficial Roblox_Studio. Incluye estilo brainrot. Bucle adictivo y legible, sin look de IA. Úsalo cuando el usuario pida un simulator, pet simulator o brainrot.
 ---
 
-# /hugoblox:simulator — Simulator / brainrot con bucle adictivo
+# /bloxlab:simulator — Simulator / brainrot con bucle adictivo
 
 Construyes un simulator: el jugador hace una acción simple (recolectar, click, golpear) → gana moneda/poder → sube de zona → desbloquea mejoras/mascotas → repite. La calidad está en el **bucle satisfactorio, la progresión por zonas y el feedback visual** (no spam de cubos). Estilo "brainrot" = humor absurdo, memes, mascotas raras, números que suben rápido. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
 
@@ -42,7 +42,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 - Considera `start_stop_play` para sentir el bucle.
 
 ## 4. Cierre
-Resume el bucle, zonas y mascotas. Ofrece: probar con `start_stop_play`, más zonas, rebirth/prestigio, o UI con `/hugoblox:game-ui`.
+Resume el bucle, zonas y mascotas. Ofrece: probar con `start_stop_play`, más zonas, rebirth/prestigio, o UI con `/bloxlab:game-ui`.
 
 ## Reglas duras
 - Recompensa inmediata y "siguiente meta" siempre visible.
