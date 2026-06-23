@@ -1,6 +1,6 @@
 <!-- Hero image TODO: add assets/hero.png and uncomment
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ElHugixbb/hugoblox/main/assets/hero.png" alt="HugoBlox — quality Roblox game-building skills for Claude Code" width="840">
+  <img src="https://raw.githubusercontent.com/imhugiok/hugoblox/main/assets/hero.png" alt="HugoBlox — quality Roblox game-building skills for Claude Code" width="840">
 </p>
 -->
 
@@ -52,7 +52,7 @@ No API keys required — Claude Code is the brain.
 **As a Claude Code plugin:**
 
 ```text
-/plugin marketplace add ElHugixbb/hugoblox
+/plugin marketplace add imhugiok/hugoblox
 /plugin install hugoblox@hugoblox
 /reload-plugins
 ```
@@ -132,9 +132,9 @@ Early and in active development. The architecture and recipes are in place; not 
 
 ## About
 
-Built by **Hugo** ([@ElHugixbb](https://github.com/ElHugixbb)) — making it easy to build *good* Roblox games with AI. Community, MIT-licensed: use it, fork it, open issues and PRs.
+Built by **Hugo Rivera** ([@imhugiok](https://github.com/imhugiok)) — making it easy to build *good* Roblox games with AI. Community, MIT-licensed: use it, fork it, open issues and PRs.
 
-<!-- Add your links: site / Instagram / YouTube -->
+- 📸 Instagram **[@imhugi.ok](https://instagram.com/imhugi.ok)**
 
 ## License
 
@@ -149,7 +149,7 @@ Built by **Hugo** ([@ElHugixbb](https://github.com/ElHugixbb)) — making it eas
 - **Cómo funciona:** Claude (cerebro) + el **MCP oficial `Roblox_Studio`** (las manos: ejecuta código, genera mallas/materiales/modelos, busca assets) + los skills de HugoBlox (el buen gusto). **Sin API keys** — el cerebro es Claude Code.
 - **Por qué:** la plomería y la generación ya las resuelve Roblox; lo que falta es la **calidad/taste**. Eso es HugoBlox.
 - **Requisitos:** Roblox Studio con su MCP activado y conectado a Claude Code + este plugin.
-- **Instalar:** `/plugin marketplace add ElHugixbb/hugoblox` → `/plugin install hugoblox@hugoblox` → `/reload-plugins`.
+- **Instalar:** `/plugin marketplace add imhugiok/hugoblox` → `/plugin install hugoblox@hugoblox` → `/reload-plugins`.
 - **Usar:** abre Studio en un lugar de prueba y corre, p. ej., `/hugoblox:horror-map`. Cada skill **pregunta primero** (ya tengo idea / un tema / lluvia de ideas / sorpréndeme / solo probando / planear) y **se autorrevisa con capturas** antes de terminar.
 - **14 skills:** terror, backrooms, obby, tycoon, simulator (incl. brainrot), shooter, tower-defense, survival, racing, roleplay-town, escape-room + sistemas (game-ui, key-door-monster, npc).
 
