@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "hugoblox",
+  "displayName": "HugoBlox",
+  "version": "0.2.0",
+  "description": "Hugo's Roblox dev toolkit: skills que construyen juegos de Roblox de CALIDAD (sin look de IA) usando el MCP oficial de Roblox Studio. Modos: horror, backrooms, obby, tycoon, simulator, shooter, tower-defense, survival, racing, roleplay-town, escape-room + sistemas (game-ui, key-door-monster, npc).",
+  "author": {
+    "name": "Hugo"
+  },
+  "license": "MIT",
+  "keywords": [
+    "roblox",
+    "roblox-studio",
+    "game-dev",
+    "horror",
+    "backrooms",
+    "obby",
+    "mcp",
+    "quality"
+  ]
+}

@@ -1,0 +1,11 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Local env / secrets (never commit)
+.env
+.env.local
+
+# Node (not used by the plugin, but just in case)
+node_modules/
