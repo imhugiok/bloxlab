@@ -128,7 +128,7 @@ docs/             design notes (quality-layer-plan.md)
 
 ## Status
 
-Early and in active development. The architecture and recipes are in place; not every skill has been battle-tested in Studio yet. Honest by design — skills won't fake asset IDs or sounds, and stop safely instead of breaking your scene. Feedback, issues, and PRs welcome.
+Early and in active development. The architecture and recipes are in place; `horror-map`, `backrooms` and `obby` have been battle-tested live in Studio (and the recipes hardened from what broke), the rest are being validated. Honest by design — skills won't fake asset IDs or sounds, and stop safely instead of breaking your scene. Feedback, issues, and PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## About
 
