@@ -50,6 +50,17 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme a
 
 Si no sabes el género, **pregúntalo o asume juguetón** (es lo que más juegos de Roblox quieren) antes de caer en el limpio-AI.
 
+### Feedback de eventos (la "juice"), por género
+Los estados de botón no bastan: cuando pasa algo importante (ganas dinero, encuentras un objeto, subes de nivel), la UI debe REACCIONAR. La intensidad va por género:
+- **Juguetón (tycoon, obby, sim, pet):** es LO que engancha a los niños — premia cada logro con juice.
+  - **Ganar dinero/puntos:** el contador **rueda** hacia el nuevo valor (tween del número, no salto seco), el pill de moneda da un **punch** de escala (1 → 1.2 → 1 con `Back`), y sale un **popup flotante "+50"** que sube y se desvanece. Opcional: íconos de moneda que estallan y vuelan hacia el pill, y un sonido corto. Color verde/dorado para ganar, rojo para perder.
+  - **Logro grande (level up, rebirth, récord):** splash mayor — flash de pantalla, confeti/partículas, escala fuerte. Que se sienta recompensa.
+- **Terror/horror:** lo OPUESTO, frío y simple. Recoger un objeto = una sola línea que aparece tenue en una esquina ("Old Key acquired."), fuente fría, SIN movimiento alegre, y se desvanece sola. Pérdida de cordura/vida = viñeta o desaturación sutil, nunca un popup feliz. El silencio incomoda.
+- **Competitivo:** punzante pero limpio — hitmarker, "+10" rápido y seco, sin rebote.
+- **Cute:** chispitas/sparkle suave, un bounce tierno.
+
+Regla: el feedback debe ser **proporcional** al evento y **coherente** con el tono. Un "+1" no merece confeti; un rebirth sí. Implementa una función reutilizable (ej. `gainSplash(amount)`, `itemFound(name)`) y dispárala desde el evento real.
+
 ## 3. Construcción (con el MCP oficial)
 1. `get_studio_state`. Crea `ScreenGui` en `StarterGui` (o `SurfaceGui` para UI en el mundo). Nombra todo claro.
 2. **Tokens (según la dirección del género, §2):** decide paleta/tipografía/espaciado/grosor de outline. Usa `UICorner`, `UIPadding`, `UIStroke`, `UIGradient`, `UIListLayout`/`UIGridLayout`, `UIAspectRatioConstraint`. Para el look juguetón: `UIStroke` gruesa oscura + esquinas muy redondeadas + `UIGradient` vertical + sombra offset + fuente pesada, en TODO elemento.
