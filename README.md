@@ -23,6 +23,30 @@
 
 ---
 
+## Gallery
+
+Real output, built live in Studio through the skills. The point isn't the engine — it's that the result looks **designed**, and the UI is **matched to the genre** instead of one generic "AI" look.
+
+**Worlds — the quality layer**
+
+| Horror | Backrooms | Obby |
+|---|---|---|
+| ![Abandoned metro horror map](assets/world-horror-metro.png) | ![Backrooms liminal level](assets/world-backrooms.png) | ![Neon obby](assets/world-obby.png) |
+
+**UI, matched to the genre** (not generic AI UI)
+
+| Playful pet shop | Cold horror dialogue | Competitive FPS HUD |
+|---|---|---|
+| ![Playful Roblox pet shop UI](assets/ui-shop-playful.png) | ![Cold horror dialogue UI](assets/ui-horror-dialogue.png) | ![Competitive FPS HUD](assets/ui-fps.png) |
+
+| Brainrot HUD | Co-op party frames | Money splash (juice) |
+|---|---|---|
+| ![Brainrot meme HUD](assets/ui-brainrot.png) | ![Cooperative party HUD](assets/ui-coop.png) | ![Coin-gain splash](assets/ui-shop-splash.png) |
+
+> Same plugin, six genres. The chunky pet shop, the cold monospace horror box, the angular FPS HUD, and the chaotic brainrot screen are all `game-ui` — it reads the genre first.
+
+---
+
 ## Why
 
 Roblox's native AI builder (and its official `Roblox_Studio` MCP) already handle the plumbing — and the generative parts (meshes, materials, 3D models) run in Roblox's cloud, so no third-party tool can beat them there. The gap is **taste**: native output looks generic and templated.
