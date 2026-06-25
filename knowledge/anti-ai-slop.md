@@ -56,3 +56,13 @@ Lecciones de correr los skills en Studio. Aplican a CUALQUIER skill que construy
 - **`Reflectance` alta = espejo blanco.** `Reflectance` alto + `Glass` refleja el ambiente como un espejo blanco brillante (peor sin `Future`). Para agua/charcos: `Reflectance` ~0.1-0.15, color oscuro, `Transparency` ~0.4, material `SmoothPlastic`; verifica en captura.
 - **Z-fighting con el baseplate:** no construyas el piso a `y=0` (parpadeo/manchas). Construye elevado (ej. base en `y=20`) o lejos del origen; eso además te da espacio vertical para capas (trincheras, sótanos).
 - **Spawn:** si construyes elevado, agrega una `SpawnLocation` dentro del mapa (sobre el piso) o el jugador aparece en el baseplate vacío. Desactiva (`Enabled=false`) la SpawnLocation default si estorba.
+
+## 12. Protocolo de fallo y rollback (no rompas la escena del usuario)
+Cómo comportarte cuando algo sale mal a mitad del build. Aplica a TODOS los skills:
+- **Antes de tocar nada:** trabaja SIEMPRE dentro de una carpeta nombrada (`Workspace/<Nombre>`), nunca sueltes partes en la raíz. Pon un `ChangeHistoryService:SetWaypoint("<Nombre> start")` al empezar (en `pcall`) para que el Ctrl+Z del usuario funcione.
+- **Aísla el riesgo:** envuelve en `pcall` toda operación que pueda fallar (writes de `Lighting`, `generate_mesh`/`generate_material`, `insert_asset`). Si una falla, NO abortes el resto: registra el fallo y sigue con lo que sí se puede.
+- **Construye en pasos verificables** (blockout → atmósfera → detalle), no en un solo script gigante. Así un fallo deja un mapa parcial pero coherente, no un revoltijo a medias.
+- **Nunca inventes IDs** de asset/sonido/decal. Si no tienes uno válido y verificado, omite esa pieza antes que romper o meter un ID falso.
+- **Nunca borres el trabajo existente del usuario.** Al re-construir, borra solo TU propia carpeta nombrada.
+- **Si algo falla:** deja la escena en estado coherente (sin partes huérfanas a medio hacer) y dile al usuario en 1-2 líneas: qué se construyó, qué falló y por qué, y cómo deshacer (Ctrl+Z, o borrar `Workspace/<Nombre>`). No declares "listo" sobre algo roto.
+- **Verifica antes de cerrar:** `screen_capture` siempre; si corriste scripts en play, revisa también `get_console_output` por errores de runtime.
