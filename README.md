@@ -1,8 +1,6 @@
-<!-- Hero image TODO: add assets/hero.png and uncomment
 <p align="center">
-  <img src="https://raw.githubusercontent.com/imhugiok/bloxlab/main/assets/hero.png" alt="Bloxlab — quality Roblox game-building skills for Claude Code" width="840">
+  <img src="https://raw.githubusercontent.com/imhugiok/bloxlab/main/assets/hero.svg" alt="Bloxlab — quality Roblox game-building skills for Claude Code" width="840">
 </p>
--->
 
 <h1 align="center">Bloxlab</h1>
 

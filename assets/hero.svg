@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0c10"/>
+      <stop offset="1" stop-color="#15171f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="c1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8865f"/><stop offset="1" stop-color="#c9603f"/></linearGradient>
+    <linearGradient id="c2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3bb6ff"/><stop offset="1" stop-color="#0a8fe6"/></linearGradient>
+    <linearGradient id="c3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46c46a"/><stop offset="1" stop-color="#26954a"/></linearGradient>
+    <linearGradient id="c4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9b7bff"/><stop offset="1" stop-color="#7048e6"/></linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ef8e64"/><stop offset="1" stop-color="#d4663f"/></linearGradient>
+  </defs>
+
+  <rect width="1280" height="420" fill="url(#bg)"/>
+  <rect width="1280" height="2" fill="#ffffff" opacity="0.05"/>
+
+  <!-- right-side floating cards (brand blocks, dark chunky stroke = the Roblox-UI motif) -->
+  <ellipse cx="1010" cy="210" rx="320" ry="220" fill="url(#glow)"/>
+  <g transform="translate(1000,210)">
+    <g transform="translate(150,-12) rotate(9)"><rect x="-78" y="-104" width="156" height="208" rx="22" fill="url(#c4)" stroke="#0b0c10" stroke-width="7"/></g>
+    <g transform="translate(40,18) rotate(-7)"><rect x="-78" y="-104" width="156" height="208" rx="22" fill="url(#c3)" stroke="#0b0c10" stroke-width="7"/></g>
+    <g transform="translate(-72,-6) rotate(5)"><rect x="-78" y="-104" width="156" height="208" rx="22" fill="url(#c2)" stroke="#0b0c10" stroke-width="7"/></g>
+    <g transform="translate(-176,22) rotate(-10)"><rect x="-70" y="-92" width="140" height="184" rx="20" fill="url(#c1)" stroke="#0b0c10" stroke-width="7"/></g>
+    <!-- little icon dots on the front card -->
+    <circle cx="40" cy="-6" r="30" fill="#ffffff" opacity="0.92"/>
+  </g>
+
+  <!-- left content -->
+  <text x="84" y="126" fill="#878d9d" font-size="17" font-weight="700" letter-spacing="3.5">CLAUDE CODE PLUGIN · ROBLOX STUDIO MCP</text>
+
+  <!-- logo mark -->
+  <rect x="84" y="150" width="70" height="70" rx="18" fill="url(#mark)" stroke="#0b0c10" stroke-width="5"/>
+  <rect x="106" y="172" width="26" height="26" rx="7" fill="#ffffff" opacity="0.95"/>
+
+  <text x="172" y="216" fill="#ffffff" font-size="94" font-weight="800" letter-spacing="-2">Bloxlab</text>
+
+  <text x="86" y="272" fill="#c7ccd8" font-size="27" font-weight="500">Quality Roblox games from one prompt. Without the AI-slop look.</text>
+
+  <!-- genre tags -->
+  <g font-size="15" font-weight="700">
+    <g transform="translate(86,300)"><rect width="86" height="30" rx="15" fill="#1b1e27" stroke="#2c303c" stroke-width="1"/><text x="43" y="20" fill="#c7ccd8" text-anchor="middle">horror</text></g>
+    <g transform="translate(180,300)"><rect width="112" height="30" rx="15" fill="#1b1e27" stroke="#2c303c" stroke-width="1"/><text x="56" y="20" fill="#c7ccd8" text-anchor="middle">backrooms</text></g>
+    <g transform="translate(300,300)"><rect width="72" height="30" rx="15" fill="#1b1e27" stroke="#2c303c" stroke-width="1"/><text x="36" y="20" fill="#c7ccd8" text-anchor="middle">obby</text></g>
+    <g transform="translate(380,300)"><rect width="86" height="30" rx="15" fill="#1b1e27" stroke="#2c303c" stroke-width="1"/><text x="43" y="20" fill="#c7ccd8" text-anchor="middle">tycoon</text></g>
+    <g transform="translate(474,300)"><rect width="106" height="30" rx="15" fill="#1b1e27" stroke="#2c303c" stroke-width="1"/><text x="53" y="20" fill="#c7ccd8" text-anchor="middle">simulator</text></g>
+    <g transform="translate(588,300)"><rect width="56" height="30" rx="15" fill="#1b1e27" stroke="#2c303c" stroke-width="1"/><text x="28" y="20" fill="#c7ccd8" text-anchor="middle">+11</text></g>
+  </g>
+
+  <!-- footer line -->
+  <g transform="translate(86,372)" font-size="15" font-weight="600">
+    <circle cx="6" cy="-4" r="6" fill="#2ea44f"/>
+    <text x="20" y="0" fill="#9097a6">no AI-slop</text>
+    <text x="132" y="0" fill="#5a6070">·</text>
+    <text x="150" y="0" fill="#9097a6">14 skills</text>
+    <text x="232" y="0" fill="#5a6070">·</text>
+    <text x="250" y="0" fill="#9097a6">MIT · open source</text>
+  </g>
+</svg>
