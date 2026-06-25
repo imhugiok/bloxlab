@@ -9,3 +9,6 @@ Thumbs.db
 
 # Node (not used by the plugin, but just in case)
 node_modules/
+
+# Local Claude Code config (per-user, not part of the plugin)
+.claude/
