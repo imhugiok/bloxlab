@@ -37,6 +37,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme a
 ## 3. Checklist técnico (aplica siempre)
 - Trabaja en `StarterGui`/`SurfaceGui`; nombres claros; no borres UI existente del usuario.
 - Acciones de juego (economía, stats) validadas en server, no en cliente.
+- **`WaitForChild` solo a lo que de verdad va a existir** (RemoteEvents en `ReplicatedStorage`, `leaderstats`): esperar un hijo que NO existe **yieldea indefinidamente y cuelga el script** (los botones dejan de responder en silencio). Para elementos ya presentes en la GUI usa `FindFirstChild(name, true)`. Verifica en `start_stop_play` que los botones responden y revisa `get_console_output`.
 - Consistencia de tokens; estados diseñados; contraste suficiente; layout responsivo (escala).
 - Auto-revisión: `screen_capture`; ¿se ve diseñada (no default gris) y se lee?; corrige, repite.
 - Considera `start_stop_play` para ver la UI en juego e interactuar.
