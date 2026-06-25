@@ -37,14 +37,28 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme a
   - **Color por categoría/rareza**: cada card/botón con su color fuerte (rojo, verde, azul, morado, amarillo).
   - **Fuentes pesadas**: `GothamBlack`/`FredokaOne`/`Bangers`/`Luckiest Guy` para títulos; `GothamBold` para botones. Texto con su propio `UIStroke` oscuro.
   - **Componentes típicos**: pill de moneda con botón `+`, stack de botones laterales (cada uno de color distinto), tabs arriba del panel, grid de cards (`UIGridLayout`) icono+label, barra de progreso, X roja para cerrar.
+  - **Tycoon en concreto**: el cash MANDA — contador grande y prominente arriba, botón `Rebirth` llamativo, botones de claim/upgrade claros con su costo y jerarquía obvia.
   - **Botones que saltan**: hover/press con escala y un pelín de overshoot (`TweenService`, `EasingStyle.Back`).
+- **Brainrot (sim absurdo/meme, Italian brainrot, pet sim extremo)** — juguetón llevado al CAOS:
+  - Colores que chocan, saturados al máximo; gradientes arcoíris (`UIGradient` animado); fondos con destellos/estrellitas. Más es más.
+  - Números que suben RÁPIDO y enormes; multiplicadores bien visibles (`x2`, `x10`, `MEGA`); contadores de gemas/cash/multi.
+  - Fuentes meme (`Bangers`, `Luckiest Guy`) gigantes con stroke grueso, a veces rainbow. Etiquetas absurdas y emojis.
+  - Todo se MUEVE: pulsos constantes, wiggle, spin, popups "RARE!!"/"OMG" que estallan, partículas. Sobreestímulo = dopamina.
+  - Ojo: lo importante (cash, botón principal) sigue legible entre el caos. El "limpio con gusto" aquí es un error.
 - **Terror / horror (escalofriante, frío)** — lo OPUESTO al juguetón:
   - Minimal, oscuro, **desaturado**. Outlines finas o ninguna; esquinas rectas o radio pequeño.
   - Paleta fría y apagada (grises, azul muerto, un acento enfermo). Transparencias, grano sutil.
   - Tipografía condensada o serif inquietante; nada redondeado-feliz. Transiciones lentas, flicker, sin "bounce".
   - **Diegético** cuando se pueda: integra la UI en el mundo (`SurfaceGui` en pantallas/letreros sucios) para inmersión.
-- **Competitivo / moderno (FPS, racing HUD, fighting)** — limpio PERO con intención (no default):
-  - Angular, alto contraste, acentos neón sobre oscuro; números grandes y legibles (munición, vueltas, vida). Aquí sí cabe el minimal, pero con tensión y un acento fuerte, no bland.
+- **Competitivo / FPS / racing / fighting** — limpio, angular y de alta legibilidad (NO bland, NO chunky):
+  - **Anatomía de HUD FPS**: vida+armadura (barra, abajo-izq), munición grande (abajo-der), crosshair central, minimapa (esquina), killfeed (arriba-der), marcador/timer (arriba-centro), hitmarker al pegar.
+  - Esquinas rectas o bisel leve; números condensados/monoespaciados en bold; acentos neón sobre oscuro semitransparente; colores de equipo.
+  - Animación seca y rápida (~0.08s), sin overshoot. Daño = flash rojo de borde/viñeta; matar = hitmarker + "+N" seco.
+  - Minimal SÍ, pero con tensión y jerarquía clara, no el vacío de IA.
+- **Cooperativo (dungeon, co-op survival, party)** — la UI gira en torno al EQUIPO:
+  - Party frames: lista de compañeros con vida/estado/clase (esquina), color por jugador.
+  - Objetivo compartido visible (progreso, contador), pings/markers, prompts de revivir ("Hold E to revive"), recursos compartidos.
+  - Legible y funcional ante todo; el estilo puede ser chunky o limpio según el juego, pero la info de equipo nunca debe estorbar el gameplay.
 - **Cute / pastel (cooking, pet care, café roleplay)** — tipo "DNA Shop":
   - Pastel (rosas, menta), bordes dobles o punteados (`UIStroke` + frame interno), todo muy redondeado y suave, fuentes redondas. Tierno, no oscuro.
 
