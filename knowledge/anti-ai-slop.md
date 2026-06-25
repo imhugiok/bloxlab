@@ -66,3 +66,6 @@ Cómo comportarte cuando algo sale mal a mitad del build. Aplica a TODOS los ski
 - **Nunca borres el trabajo existente del usuario.** Al re-construir, borra solo TU propia carpeta nombrada.
 - **Si algo falla:** deja la escena en estado coherente (sin partes huérfanas a medio hacer) y dile al usuario en 1-2 líneas: qué se construyó, qué falló y por qué, y cómo deshacer (Ctrl+Z, o borrar `Workspace/<Nombre>`). No declares "listo" sobre algo roto.
 - **Verifica antes de cerrar:** `screen_capture` siempre; si corriste scripts en play, revisa también `get_console_output` por errores de runtime.
+
+## 13. UI in-game: según el género, no limpia-AI
+Cualquier HUD/menú/tienda/diálogo que construyas: el look **limpio-minimalista corporativo es el tell de IA** en Roblox (se ve vacío y genérico). Hazlo según el género: por defecto **chunky juguetón** (outline gruesa oscura en `UIStroke`, esquinas muy redondeadas, `UIGradient` vertical, sombra offset, fuentes pesadas con stroke, color por categoría/rareza); frío/minimal/desaturado para terror; pastel y redondo para cute. Nunca dejes el `TextButton` gris crudo. Guía completa por género en el skill `game-ui`.
