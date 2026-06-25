@@ -5,7 +5,7 @@ description: Construye un simulator (recolecta/click/grind para subir stats y ma
 
 # /bloxlab:simulator — Simulator / brainrot con bucle adictivo
 
-Construyes un simulator: el jugador hace una acción simple (recolectar, click, golpear) → gana moneda/poder → sube de zona → desbloquea mejoras/mascotas → repite. La calidad está en el **bucle satisfactorio, la progresión por zonas y el feedback visual** (no spam de cubos). Estilo "brainrot" = humor absurdo, memes, mascotas raras, números que suben rápido. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Construyes un simulator: el jugador hace una acción simple (recolectar, click, golpear) → gana moneda/poder → sube de zona → desbloquea mejoras/mascotas → repite. La calidad está en el **bucle satisfactorio, la progresión por zonas y el feedback visual** (no spam de cubos). Estilo "brainrot" = humor absurdo, memes, mascotas raras, números que suben rápido. **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`. Si no puedes abrirlo (p. ej. en modo prueba local), aplica su núcleo de memoria: mata la uniformidad (sin grids perfectos), atmósfera/composición antes que cantidad, `Color3` con paleta acotada (no `BrickColor`), escala humana en studs, imperfección intencional, y auto-revisión con `screen_capture` antes de decir "listo".
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

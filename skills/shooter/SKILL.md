@@ -5,7 +5,7 @@ description: Construye un shooter (FPS/TPS o arena de combate) de CALIDAD en el 
 
 # /bloxlab:shooter — Shooter con buen flujo de combate
 
-Construyes un shooter centrado en un **mapa con buen flujo** (cobertura, sightlines, rutas) y, si se pide, mecánica de disparo básica. La calidad está en el **diseño de combate** (no una caja plana) y el game feel. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Construyes un shooter centrado en un **mapa con buen flujo** (cobertura, sightlines, rutas) y, si se pide, mecánica de disparo básica. La calidad está en el **diseño de combate** (no una caja plana) y el game feel. **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`. Si no puedes abrirlo (p. ej. en modo prueba local), aplica su núcleo de memoria: mata la uniformidad (sin grids perfectos), atmósfera/composición antes que cantidad, `Color3` con paleta acotada (no `BrickColor`), escala humana en studs, imperfección intencional, y auto-revisión con `screen_capture` antes de decir "listo".
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

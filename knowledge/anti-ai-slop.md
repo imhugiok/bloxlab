@@ -48,3 +48,11 @@ Un cuarto vacío con buena luz/niebla se ve mejor que uno lleno con luz plana.
 ## 10. Seguridad y limpieza
 - Construye dentro de una carpeta nombrada (ej. `Workspace/<NombreDelMapa>`).
 - No borres el trabajo existente del usuario. Usa waypoints de ChangeHistory cuando se pueda para que el undo funcione.
+
+## 11. Gotchas técnicos de Roblox (probados en build real vía MCP)
+Lecciones de correr los skills en Studio. Aplican a CUALQUIER skill que construya con `execute_luau`:
+- **`Lighting.Technology` no se puede leer ni escribir** desde `execute_luau` ("lacking capability RobloxScript"); el intento aborta el script. NUNCA la setees por código. Envuelve TODOS los writes de `Lighting` en `pcall` para que un fallo no tumbe el build.
+- **Calibra la luz empíricamente y según el MOOD, no por números fijos.** El render depende de la tecnología del lugar (no la controlas) y del ambiente que buscas. Terror oscuro: `Ambient` bajo (~rgb(42,44,52)) + charcos de luz (`PointLight` `Brightness` ~3, `Range` ~36, casi sin sombras). Liminal/brillante (backrooms, oficinas, hospital): `Ambient` ALTO (~rgb(120,120,90) o más), `EnvironmentDiffuseScale` ~1, luz plana y pareja sin sombras. En ambos casos `Brightness` global ~2.2-3, y si sale casi negro SUBE estos valores antes de rendirte. Itera con `screen_capture` hasta que las superficies se lean.
+- **`Reflectance` alta = espejo blanco.** `Reflectance` alto + `Glass` refleja el ambiente como un espejo blanco brillante (peor sin `Future`). Para agua/charcos: `Reflectance` ~0.1-0.15, color oscuro, `Transparency` ~0.4, material `SmoothPlastic`; verifica en captura.
+- **Z-fighting con el baseplate:** no construyas el piso a `y=0` (parpadeo/manchas). Construye elevado (ej. base en `y=20`) o lejos del origen; eso además te da espacio vertical para capas (trincheras, sótanos).
+- **Spawn:** si construyes elevado, agrega una `SpawnLocation` dentro del mapa (sobre el piso) o el jugador aparece en el baseplate vacío. Desactiva (`Enabled=false`) la SpawnLocation default si estorba.

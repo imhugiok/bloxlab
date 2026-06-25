@@ -5,7 +5,7 @@ description: Construye un nivel tipo Backrooms (liminal, infinito, inquietante) 
 
 # /bloxlab:backrooms — Nivel liminal de Backrooms
 
-Construyes un espacio liminal (vacío, repetitivo, "mal") que da desasosiego, en el Studio abierto, vía el MCP oficial `Roblox_Studio`. El miedo aquí es la **monotonía inquietante y la desorientación**, no los sustos. Aplica los principios anti-AI-slop (en `knowledge/anti-ai-slop.md`): escala humana, color con intención, auto-revisión.
+Construyes un espacio liminal (vacío, repetitivo, "mal") que da desasosiego, en el Studio abierto, vía el MCP oficial `Roblox_Studio`. El miedo aquí es la **monotonía inquietante y la desorientación**, no los sustos. **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`: escala humana en studs, `Color3` con paleta acotada, monotonía inquietante pero intencional, y auto-revisión con `screen_capture` antes de "listo". Si no puedes abrir el archivo (p. ej. en modo prueba local), aplica ese núcleo de memoria.
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere, con estas opciones:
@@ -27,7 +27,7 @@ Confirma en 1 línea antes de arrancar. Si dice "hazlo ya", asume Sorpréndeme.
 ## 2. Construcción (con el MCP oficial)
 1. `get_studio_state` para confirmar Studio. Trabaja en `Workspace/Backrooms_<variante>`.
 2. **Módulos repetibles:** define 2-3 piezas (cuarto, pasillo, intersección) y repítelas en una retícula GRANDE con giros, para sensación de laberinto infinito. Techo bajo (~10-12 studs), pasillos angostos.
-3. **Atmósfera:** `Lighting` con tinte verdoso-amarillo, `Atmosphere` con haze leve, fluorescentes (muchos `PointLight`/`SurfaceLight` regulares, color frío), 1-2 parpadeando. Mantén legible (sube Ambient).
+3. **Atmósfera:** `Lighting` con tinte verdoso-amarillo, `Atmosphere` con haze leve, fluorescentes (muchos `PointLight`/`SurfaceLight` regulares, color frío), 1-2 parpadeando. Mantén legible (sube Ambient). Envuelve los writes de `Lighting` en `pcall` y si sale negro sube Brightness/Ambient y el Brightness/Range de las luces (ver gotchas técnicos en `anti-ai-slop.md`).
 4. **Materiales/manchas:** alfombra y paredes con material y color sucios; añade decals de humedad/manchas solo con IDs válidos (si no, omite).
 5. **Detalle escaso:** 1-3 objetos solitarios por sector (silla, cono, charco) con `search_asset`/`insert_asset`, sin saturar.
 6. **Sonido:** zumbido fluorescente en loop si hay ID válido; si no, omite.

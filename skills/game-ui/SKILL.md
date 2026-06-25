@@ -5,7 +5,7 @@ description: Construye UI in-game para jugadores (HUD, menús, botones, tiendas,
 
 # /bloxlab:game-ui — Interfaces in-game que no se ven genéricas
 
-Construyes UI que los jugadores ven y usan dentro del juego (HUD, menús, tiendas, diálogos, botones), con buen diseño. La calidad está en **jerarquía, consistencia y estados** (no el botón gris default de Roblox). Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`) en clave UI.
+Construyes UI que los jugadores ven y usan dentro del juego (HUD, menús, tiendas, diálogos, botones), con buen diseño. La calidad está en **jerarquía, consistencia y estados** (no el botón gris default de Roblox). **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md` en clave UI: jerarquía, sistema de tokens (paleta/tipografía/espaciado), estados diseñados, y auto-revisión vía `screen_capture`. Si no puedes abrir el archivo (p. ej. en modo prueba local), aplica ese núcleo de memoria.
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

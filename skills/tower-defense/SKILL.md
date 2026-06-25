@@ -5,7 +5,7 @@ description: Construye un tower defense (oleadas de enemigos por un camino, torr
 
 # /bloxlab:tower-defense — Tower Defense con buen ritmo
 
-Construyes un TD: enemigos avanzan por un camino hacia una base; el jugador coloca torres con su dinero para detenerlos por oleadas. La calidad está en el **ritmo de oleadas, el balance y un mapa con identidad** (no un camino gris en zigzag plano). Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Construyes un TD: enemigos avanzan por un camino hacia una base; el jugador coloca torres con su dinero para detenerlos por oleadas. La calidad está en el **ritmo de oleadas, el balance y un mapa con identidad** (no un camino gris en zigzag plano). **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`. Si no puedes abrirlo (p. ej. en modo prueba local), aplica su núcleo de memoria: mata la uniformidad (sin grids perfectos), atmósfera/composición antes que cantidad, `Color3` con paleta acotada (no `BrickColor`), escala humana en studs, imperfección intencional, y auto-revisión con `screen_capture` antes de decir "listo".
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

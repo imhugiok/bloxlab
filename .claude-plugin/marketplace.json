@@ -10,7 +10,7 @@
       "name": "bloxlab",
       "source": "./",
       "description": "Skills que construyen juegos de Roblox de calidad (sin look de IA) vía el MCP oficial de Roblox Studio.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "workflow",
       "keywords": ["roblox", "game-dev", "quality"]
     }

@@ -5,7 +5,7 @@ description: Construye un juego de carreras (pista con vueltas, checkpoints, veh
 
 # /bloxlab:racing — Carreras con buen trazado
 
-Construyes una carrera: una pista con trazado interesante, checkpoints, vueltas y meta. La calidad está en el **trazado** (curvas que se sientan bien, no un óvalo plano) y la lectura de la pista. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Construyes una carrera: una pista con trazado interesante, checkpoints, vueltas y meta. La calidad está en el **trazado** (curvas que se sientan bien, no un óvalo plano) y la lectura de la pista. **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`. Si no puedes abrirlo (p. ej. en modo prueba local), aplica su núcleo de memoria: mata la uniformidad (sin grids perfectos), atmósfera/composición antes que cantidad, `Color3` con paleta acotada (no `BrickColor`), escala humana en studs, imperfección intencional, y auto-revisión con `screen_capture` antes de decir "listo".
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

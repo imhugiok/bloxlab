@@ -5,7 +5,7 @@ description: Construye un obby (carrera de obstáculos/parkour) de CALIDAD en el
 
 # /bloxlab:obby — Carrera de obstáculos justa y divertida
 
-Construyes un obby con **game feel justo**: retador pero nunca tramposo, con progresión clara y checkpoints. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`): nada de retícula plana y gris; tema, color y ritmo intencionales.
+Construyes un obby con **game feel justo**: retador pero nunca tramposo, con progresión clara y checkpoints. **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`: nada de retícula plana y gris; tema, color y ritmo intencionales, con auto-revisión vía `screen_capture`. Si no puedes abrir el archivo (p. ej. en modo prueba local), aplica ese núcleo de memoria.
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

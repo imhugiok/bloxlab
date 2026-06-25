@@ -5,7 +5,7 @@ description: Crea NPCs (personajes no jugables: vendedores, guías, enemigos, fa
 
 # /bloxlab:npc — NPCs con comportamiento creíble
 
-Creas NPCs que dan vida al juego: vendedores/guías que hablan, enemigos que persiguen, fauna que deambula, aldeanos que pueblan un town. La calidad está en **comportamiento creíble y legible** (no un dummy plantado que no hace nada). Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Creas NPCs que dan vida al juego: vendedores/guías que hablan, enemigos que persiguen, fauna que deambula, aldeanos que pueblan un town. La calidad está en **comportamiento creíble y legible** (no un dummy plantado que no hace nada). **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`. Si no puedes abrirlo (p. ej. en modo prueba local), aplica su núcleo de memoria: mata la uniformidad (sin grids perfectos), atmósfera/composición antes que cantidad, `Color3` con paleta acotada (no `BrickColor`), escala humana en studs, imperfección intencional, y auto-revisión con `screen_capture` antes de decir "listo".
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

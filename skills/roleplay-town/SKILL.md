@@ -5,7 +5,7 @@ description: Construye un mundo de roleplay/town (pueblo o ciudad habitable esti
 
 # /bloxlab:roleplay-town — Pueblo/ciudad habitable para roleplay
 
-Construyes un mundo social: casas, tiendas, calles y puntos de interés donde la gente "vive" y juega roles. La calidad está en que se sienta **un lugar real y acogedor con vida**, no edificios-caja repetidos. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Construyes un mundo social: casas, tiendas, calles y puntos de interés donde la gente "vive" y juega roles. La calidad está en que se sienta **un lugar real y acogedor con vida**, no edificios-caja repetidos. **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`. Si no puedes abrirlo (p. ej. en modo prueba local), aplica su núcleo de memoria: mata la uniformidad (sin grids perfectos), atmósfera/composición antes que cantidad, `Color3` con paleta acotada (no `BrickColor`), escala humana en studs, imperfección intencional, y auto-revisión con `screen_capture` antes de decir "listo".
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

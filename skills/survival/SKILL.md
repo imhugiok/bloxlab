@@ -5,7 +5,7 @@ description: Construye un juego de supervivencia (recolectar, craftear, resistir
 
 # /bloxlab:survival — Supervivencia con tensión y bucle claro
 
-Construyes un survival: el jugador recolecta recursos, craftea/mejora, y resiste una amenaza (hambre, frío, noche, enemigos, desastre). La calidad está en el **bucle de tensión-alivio y un mundo creíble** (no un terreno plano vacío). Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Construyes un survival: el jugador recolecta recursos, craftea/mejora, y resiste una amenaza (hambre, frío, noche, enemigos, desastre). La calidad está en el **bucle de tensión-alivio y un mundo creíble** (no un terreno plano vacío). **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`. Si no puedes abrirlo (p. ej. en modo prueba local), aplica su núcleo de memoria: mata la uniformidad (sin grids perfectos), atmósfera/composición antes que cantidad, `Color3` con paleta acotada (no `BrickColor`), escala humana en studs, imperfección intencional, y auto-revisión con `screen_capture` antes de decir "listo".
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

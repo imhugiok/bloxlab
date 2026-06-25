@@ -5,7 +5,7 @@ description: Implementa un sistema de objetivo (llaves, puertas, monstruo/amenaz
 
 # /bloxlab:key-door-monster — Sistema de objetivo y tensión
 
-Implementas el bucle clásico que convierte un mapa en un JUEGO: busca llaves → abre puertas → evita/sobrevive a una amenaza → llega a la meta. Ideal para sumarlo a un `/bloxlab:horror-map`, `/bloxlab:backrooms` o cualquier mapa. La calidad está en **tensión justa, feedback claro y reglas legibles**. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Implementas el bucle clásico que convierte un mapa en un JUEGO: busca llaves → abre puertas → evita/sobrevive a una amenaza → llega a la meta. Ideal para sumarlo a un `/bloxlab:horror-map`, `/bloxlab:backrooms` o cualquier mapa. La calidad está en **tensión justa, feedback claro y reglas legibles**. **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`. Si no puedes abrirlo (p. ej. en modo prueba local), aplica su núcleo de memoria: mata la uniformidad (sin grids perfectos), atmósfera/composición antes que cantidad, `Color3` con paleta acotada (no `BrickColor`), escala humana en studs, imperfección intencional, y auto-revisión con `screen_capture` antes de decir "listo".
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:

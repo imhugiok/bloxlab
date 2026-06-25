@@ -5,7 +5,7 @@ description: Construye un tycoon (compra-y-genera-dinero por droppers/botones) d
 
 # /bloxlab:tycoon — Tycoon con progresión satisfactoria
 
-Construyes un tycoon: el jugador reclama una base, compra mejoras con botones, y un bucle de **dinero → comprar → producir más** lo engancha. La calidad está en que el **bucle se sienta bien** y la base no parezca cubos grises. Aplica anti-AI-slop (`knowledge/anti-ai-slop.md`).
+Construyes un tycoon: el jugador reclama una base, compra mejoras con botones, y un bucle de **dinero → comprar → producir más** lo engancha. La calidad está en que el **bucle se sienta bien** y la base no parezca cubos grises. **Antes de construir, lee y aplica** `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md`. Si no puedes abrirlo (p. ej. en modo prueba local), aplica su núcleo de memoria: mata la uniformidad (sin grids perfectos), atmósfera/composición antes que cantidad, `Color3` con paleta acotada (no `BrickColor`), escala humana en studs, imperfección intencional, y auto-revisión con `screen_capture` antes de decir "listo".
 
 ## 0. Pregunta primero (SIEMPRE, antes de construir)
 NO empieces a construir. Pregunta qué quiere:
