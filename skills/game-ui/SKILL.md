@@ -54,7 +54,11 @@ Si no sabes el género, **pregúntalo o asume juguetón** (es lo que más juegos
 1. `get_studio_state`. Crea `ScreenGui` en `StarterGui` (o `SurfaceGui` para UI en el mundo). Nombra todo claro.
 2. **Tokens (según la dirección del género, §2):** decide paleta/tipografía/espaciado/grosor de outline. Usa `UICorner`, `UIPadding`, `UIStroke`, `UIGradient`, `UIListLayout`/`UIGridLayout`, `UIAspectRatioConstraint`. Para el look juguetón: `UIStroke` gruesa oscura + esquinas muy redondeadas + `UIGradient` vertical + sombra offset + fuente pesada, en TODO elemento.
 3. **Componentes:** construye con `execute_luau` los elementos pedidos (HUD de stats, menú, tienda, etc.) con jerarquía y layout limpios.
-4. **Estados/anim:** hover/press/transiciones con `TweenService`; feedback al clic.
+4. **Estados/anim (DEBE ser funcional, no un mockup):** cada botón va wired en un `LocalScript` con `MouseEnter`/`MouseLeave` (hover) y `Activated` (click), y el click hace algo real. Intensidad de animación SEGÚN GÉNERO:
+   - **Juguetón:** hover = escala +5-8% y brillo; press = escala -6% y rebote de vuelta (`TweenService` con `EasingStyle.Back`). Que se sienta "gomoso". Opcional: idle bounce sutil en el botón principal.
+   - **Terror/horror:** SOLO hover sutil (un brillo tenue o un borde que aparece) para que el jugador vea que es clickeable; nada de rebotes ni escala alegre. Recuerda: el terror casi no usa UI — solo diálogos, prompts de objeto/compra, notas/inventario. No metas un HUD lleno donde no toca.
+   - **Competitivo:** transiciones rápidas y secas (~0.08s), sin overshoot.
+   - **Cute:** squish suave (escala Y leve) en press.
 5. **Lógica:** conecta botones a su función (abrir/cerrar, comprar, etc.); para datos sensibles (compras, stats), valida en el SERVIDOR vía `RemoteEvent`/`RemoteFunction`.
 6. **Responsivo:** verifica en distinto tamaño; usa escala, no solo offset.
 
@@ -65,6 +69,13 @@ Si no sabes el género, **pregúntalo o asume juguetón** (es lo que más juegos
 - Consistencia de tokens; estados diseñados; contraste suficiente; layout responsivo (escala).
 - Auto-revisión: `screen_capture`; ¿se ve diseñada (no default gris) y se lee?; corrige, repite.
 - Considera `start_stop_play` para ver la UI en juego e interactuar.
+
+## 5b. La UI DEBE ser funcional
+Una UI bonita pero estática no sirve. Antes de declarar "listo":
+- Cada botón está conectado en un `LocalScript`, con estados (hover/press) y una acción real.
+- Pruébala en `start_stop_play`: los botones responden al cursor (hover) y al clic, y el clic hace lo suyo.
+- Acciones sensibles (comprar, equipar, stats) van validadas en el SERVIDOR vía `RemoteEvent`/`RemoteFunction`.
+Si entregas un mockup que no se puede clickear, no terminaste.
 
 ## 5. Cierre
 Resume las pantallas/elementos creados. Ofrece: probar con `start_stop_play`, conectar a la lógica del juego, más pantallas, o ajustes de estilo.
