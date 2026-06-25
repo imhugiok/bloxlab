@@ -1,64 +1,46 @@
-# Capa de Calidad para Roblox (rumbo desde 2026-06-22)
+# Design notes — the quality layer
 
-## Qué es esto en una frase
-Escribir un prompt simple en Claude Code (ej. "crea un mapa tipo backrooms") y que se construya un juego de Roblox **de calidad, que no parezca hecho con IA**.
+Internal rationale and dev notes. User-facing docs live in the [README](../README.md);
+the quality bar itself lives in [`knowledge/anti-ai-slop.md`](../knowledge/anti-ai-slop.md).
+This file only records the *why* behind the decisions, so they don't get re-litigated.
 
-## Cómo funciona (la arquitectura, simple)
-```
-Tú escribes en Claude Code  ->  Claude (el cerebro, gratis con tu suscripción)
-        ->  usa el MCP oficial "Roblox_Studio" (las manos)
-        ->  construye en tu Roblox Studio abierto
-```
-- **El cerebro:** Claude Code. No usamos tu API key de Anthropic (cara). No hay chat propio en el navegador.
-- **Las manos:** el MCP oficial de Roblox (ya conectado en Claude Code y Claude Desktop). Hace todo: ejecutar código, generar mallas/materiales/modelos 3D, buscar e insertar assets, etc.
-- **Nuestro valor:** los **skills** (`/horror-map`, `/backrooms`, ...) + el **conocimiento de game design** que hace que el resultado se vea bien y no genérico. Eso es lo único que el asistente nativo de Roblox hace mal.
+## The one decision that shapes everything
 
-## Estructura del proyecto
-- `skills/<nombre>/SKILL.md` — fuente de cada skill (versionada en el repo).
-- `knowledge/` — conocimiento compartido que los skills citan (ej. `anti-ai-slop.md`).
-- Copia instalada en `~/.claude/skills/<nombre>/SKILL.md` para que funcione como `/<nombre>` en Claude Code.
-- `docs/` — este plan y notas.
-- Lo viejo (`mcp-server.mjs`, `plugin/`, `scripts/*dashboard*`, `src/brain`, `src/safety`) queda como referencia histórica. Superado por el MCP oficial; no se borra.
+Roblox already ships a first-party AI assistant and an official `Roblox_Studio` MCP that
+can run code, generate meshes/materials/3D models, and search assets. The generative parts
+run in Roblox's cloud, so no third-party tool can beat them there.
 
-## El MCP oficial: herramientas disponibles (las "manos")
-Lectura/inspección: `get_studio_state`, `inspect_instance`, `search_game_tree`, `script_read/search/grep`, `get_console_output`, `screen_capture`, `list_roblox_studios`.
-Construcción: `execute_luau` (ejecuta cualquier código = la llave maestra), `multi_edit`.
-Generación IA (nube de Roblox, no replicable por terceros): `generate_mesh`, `generate_material`, `generate_procedural_model`.
-Assets: `search_asset`, `insert_asset`, `store_image`, `upload_image`.
-Pruebas/jugador: `start_stop_play`, `character_navigation`, `user_keyboard_input`, `user_mouse_input`, `wait_job_finished`.
-Agentes: `subagent`, `skill`.
+So bloxlab does **not** rebuild the engine. Claude Code is the brain (free with the
+subscription — no Anthropic API key), the official MCP is the hands, and our only value is
+the **taste**: per-genre game-design knowledge + an anti-slop checklist + build recipes that
+make the output look intentional instead of auto-generated. The moment we'd try to
+reimplement generation or asset search, we'd be losing to Roblox's own cloud.
 
-## Catálogo de skills (creados)
+## Why a Claude Code plugin (and not a standalone tool)
 
-Todos empiezan con el **intake obligatorio** (`knowledge/intake.md`): preguntan qué quiere el usuario antes de construir (ya tengo algo en mente / un tema / lluvia de ideas / sorpréndeme / solo probando / planear primero). Y todos citan `knowledge/anti-ai-slop.md`.
+- The brain and the hands already live inside Claude Code (the MCP is connected there).
+- Skills are just Markdown recipes — easy to read, fork, and PR. Low barrier for contributors.
+- `${CLAUDE_PLUGIN_ROOT}` lets every skill pull the shared `knowledge/` at run time, so the
+  anti-slop layer stays in one place instead of being copy-pasted into 14 files.
 
-Modos de juego:
-- `/bloxlab:horror-map` — mapa de terror con atmósfera real.
-- `/bloxlab:backrooms` — liminal/infinito, luz fluorescente sucia.
-- `/bloxlab:obby` — obstáculos justos, progresión, checkpoints.
-- `/bloxlab:tycoon` — bucle comprar→producir→crecer.
-- `/bloxlab:simulator` — recolectar/click/grind, zonas, mascotas (incl. brainrot).
-- `/bloxlab:shooter` — mapa con flujo de combate (+ disparo básico opcional).
-- `/bloxlab:tower-defense` — oleadas por un camino, torres con roles.
-- `/bloxlab:survival` — recolectar/craftear/resistir, tensión-alivio.
-- `/bloxlab:racing` — pista con buen trazado, checkpoints, vueltas.
-- `/bloxlab:roleplay-town` — pueblo/ciudad habitable con vida.
-- `/bloxlab:escape-room` — puzzles justos encadenados.
+## Dev notes (things that bite)
 
-Sistemas (piezas para cualquier juego):
-- `/bloxlab:game-ui` — HUD/menús/tiendas/diálogos que no se ven genéricos.
-- `/bloxlab:key-door-monster` — sistema de objetivo (llaves, puertas, amenaza, meta).
-- `/bloxlab:npc` — NPCs con comportamiento (vendedor, guía, enemigo, fauna).
+- **Installed plugins are a cached copy** — they do not auto-update. After editing skills:
+  bump the version in `.claude-plugin/plugin.json`, then `/plugin` update + `/reload-plugins`.
+- **To test a skill you don't need to install it** — follow its `SKILL.md` and drive the
+  official MCP directly. (That's how every skill in this repo was battle-tested.)
+- **`Lighting.Technology` can't be read or written** from the `execute_luau` sandbox
+  ("lacking capability RobloxScript"). Wrap all Lighting writes in `pcall`. Light numbers are
+  mood-dependent and must be calibrated empirically via `screen_capture` — full list of these
+  gotchas is in `knowledge/anti-ai-slop.md` §11.
+- Scripts only run in Play mode, so gameplay/economy/UI testing needs `start_stop_play`.
 
-Futuro posible: más géneros (clicker puro, plataformas 2.5D, fishing, cooking), y sub-skills (lighting-mood, terrain, sound-design).
+## Golden rules
 
-## Workflow para usar/actualizar skills
-- Los skills viven en el repo (`skills/`) y se empaquetan en el plugin `bloxlab`.
-- Al instalar, Claude Code **copia** el plugin a su caché; **no se auto-actualiza**. Tras agregar/editar skills: subir versión en `.claude-plugin/plugin.json`, y en Claude Code correr la actualización del plugin (`/plugin`) + `/reload-plugins`.
-- Para PROBAR un skill no hace falta instalarlo: se sigue su `SKILL.md` y se usa el MCP oficial directo.
+- Always work inside a named folder; never delete Hugo's existing work.
+- Atmosphere (light/fog/color) before object count — it's the biggest quality lever.
+- Self-review with `screen_capture` before saying "done".
+- Keep skills self-contained and the repo clean.
 
-## Reglas de oro
-- Siempre trabajar dentro de una carpeta nombrada, sin borrar el trabajo existente de Hugo.
-- Atmósfera (luz/niebla/color) antes que cantidad de objetos: es la mayor palanca de calidad.
-- Auto-revisión con `screen_capture` antes de decir "listo".
-- Open source: posible más adelante; mantener el repo limpio y los skills auto-contenidos.
+> Origin: 2026-06-22. The catalog of skills and the architecture diagram now live in the
+> README — see there for the current list.
