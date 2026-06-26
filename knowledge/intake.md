@@ -1,6 +1,6 @@
 # Intake: preguntar SIEMPRE antes de construir
 
-Patrón compartido por TODOS los skills de Bloxlab. Al invocar cualquier skill, lo primero NO es construir: es entender qué quiere el usuario. Esto evita construir algo que no pidió.
+Patrón compartido por TODOS los skills de BloxLab. Al invocar cualquier skill, lo primero NO es construir: es entender qué quiere el usuario. Esto evita construir algo que no pidió.
 
 ## Pregunta inicial (presenta estas opciones)
 

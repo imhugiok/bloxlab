@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/imhugiok/bloxlab/main/assets/hero.svg" alt="Bloxlab — quality Roblox game-building skills for Claude Code" width="840">
+  <img src="https://raw.githubusercontent.com/imhugiok/bloxlab/main/assets/hero.png" alt="BloxLab — quality Roblox game-building skills for Claude Code" width="100%">
 </p>
 
-<h1 align="center">Bloxlab</h1>
+<h1 align="center">BloxLab</h1>
 
 <p align="center">
   <strong>Quality game-building skills for Roblox — as a Claude Code plugin.</strong><br>
@@ -21,7 +21,7 @@
   <img src="https://img.shields.io/badge/skills-14-7c5cff.svg" alt="14 skills">
 </p>
 
-> **The engine is solved — taste isn't.** Roblox already ships a first-party AI assistant and an official MCP that can run code, generate meshes/materials, and search assets. What it *can't* do is make the result feel designed. Bloxlab is that missing **quality layer**.
+> **The engine is solved — taste isn't.** Roblox already ships a first-party AI assistant and an official MCP that can run code, generate meshes/materials, and search assets. What it *can't* do is make the result feel designed. BloxLab is that missing **quality layer**.
 
 ---
 
@@ -53,13 +53,13 @@ Real output, built live in Studio through the skills. The point isn't the engine
 
 Roblox's native AI builder (and its official `Roblox_Studio` MCP) already handle the plumbing — and the generative parts (meshes, materials, 3D models) run in Roblox's cloud, so no third-party tool can beat them there. The gap is **taste**: native output looks generic and templated.
 
-Bloxlab doesn't rebuild the engine. It adds per-genre **game-design knowledge** + an **anti-AI-slop checklist** + a build recipe, so what gets built looks intentional, not auto-generated.
+BloxLab doesn't rebuild the engine. It adds per-genre **game-design knowledge** + an **anti-AI-slop checklist** + a build recipe, so what gets built looks intentional, not auto-generated.
 
 ```text
 You (a prompt in Claude Code)
    → Claude            the brain
    → Roblox_Studio MCP the hands (run code · generate · search assets)
-   → Bloxlab skills    the taste (how to make it actually good)
+   → BloxLab skills    the taste (how to make it actually good)
    → your open Roblox Studio
 ```
 
@@ -172,10 +172,10 @@ Built by **Hugo Rivera** ([@imhugiok](https://github.com/imhugiok)) — making i
   <a href="#readme">🇬🇧 English</a>  ·  <b>🇪🇸 Español</b>
 </p>
 
-**Bloxlab** es un plugin de **Claude Code** con skills que construyen **juegos de Roblox de calidad a partir de un prompt** — sin el look genérico de IA. Escribes algo como `/bloxlab:horror-map`, Claude **te pregunta qué quieres**, y lo construye en tu Roblox Studio abierto.
+**BloxLab** es un plugin de **Claude Code** con skills que construyen **juegos de Roblox de calidad a partir de un prompt** — sin el look genérico de IA. Escribes algo como `/bloxlab:horror-map`, Claude **te pregunta qué quieres**, y lo construye en tu Roblox Studio abierto.
 
-- **Cómo funciona:** Claude (cerebro) + el **MCP oficial `Roblox_Studio`** (las manos: ejecuta código, genera mallas/materiales/modelos, busca assets) + los skills de Bloxlab (el buen gusto). **Sin API keys** — el cerebro es Claude Code.
-- **Por qué:** la plomería y la generación ya las resuelve Roblox; lo que falta es la **calidad/taste**. Eso es Bloxlab.
+- **Cómo funciona:** Claude (cerebro) + el **MCP oficial `Roblox_Studio`** (las manos: ejecuta código, genera mallas/materiales/modelos, busca assets) + los skills de BloxLab (el buen gusto). **Sin API keys** — el cerebro es Claude Code.
+- **Por qué:** la plomería y la generación ya las resuelve Roblox; lo que falta es la **calidad/taste**. Eso es BloxLab.
 - **Requisitos:** Roblox Studio con su MCP activado y conectado a Claude Code + este plugin.
 - **Instalar:** `/plugin marketplace add imhugiok/bloxlab` → `/plugin install bloxlab@bloxlab` → `/reload-plugins`.
 - **Usar:** abre Studio en un lugar de prueba y corre, p. ej., `/bloxlab:horror-map`. Cada skill **pregunta primero** (ya tengo idea / un tema / lluvia de ideas / sorpréndeme / solo probando / planear) y **se autorrevisa con capturas** antes de terminar.

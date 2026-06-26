@@ -4,7 +4,7 @@
   "owner": {
     "name": "Hugo Rivera"
   },
-  "description": "Bloxlab - skills para construir juegos de Roblox de calidad con IA.",
+  "description": "BloxLab - skills para construir juegos de Roblox de calidad con IA.",
   "plugins": [
     {
       "name": "bloxlab",

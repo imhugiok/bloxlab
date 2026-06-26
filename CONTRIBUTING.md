@@ -1,6 +1,6 @@
-# Contributing to Bloxlab
+# Contributing to BloxLab
 
-Thanks for wanting to help. Bloxlab is a Claude Code plugin: a set of skills that build **quality** Roblox games via the official `Roblox_Studio` MCP, with an anti-AI-slop quality layer. New skills, fixes, and quality improvements are all welcome.
+Thanks for wanting to help. BloxLab is a Claude Code plugin: a set of skills that build **quality** Roblox games via the official `Roblox_Studio` MCP, with an anti-AI-slop quality layer. New skills, fixes, and quality improvements are all welcome.
 
 🇪🇸 *Resumen en español al final.*
 
@@ -68,4 +68,4 @@ By contributing you agree your work is licensed under the project's [MIT license
 
 ## 🇪🇸 Resumen
 
-Bloxlab es un plugin de Claude Code: skills que construyen juegos de Roblox de calidad vía el MCP oficial, sin look de IA. Para cambios grandes, **abre un issue primero**. Un skill = `skills/<nombre>/SKILL.md` (frontmatter + intake primero + leer `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md` + recipe por pasos + auto-revisión con `screen_capture`). Pruébalo en un place de prueba con Studio + MCP conectado. PRs chicos y enfocados, desde una rama, nunca `main`. Lo más rápido: copia un skill existente parecido y adáptalo. MIT.
+BloxLab es un plugin de Claude Code: skills que construyen juegos de Roblox de calidad vía el MCP oficial, sin look de IA. Para cambios grandes, **abre un issue primero**. Un skill = `skills/<nombre>/SKILL.md` (frontmatter + intake primero + leer `${CLAUDE_PLUGIN_ROOT}/knowledge/anti-ai-slop.md` + recipe por pasos + auto-revisión con `screen_capture`). Pruébalo en un place de prueba con Studio + MCP conectado. PRs chicos y enfocados, desde una rama, nunca `main`. Lo más rápido: copia un skill existente parecido y adáptalo. MIT.
