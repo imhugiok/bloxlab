@@ -166,6 +166,7 @@ Early and in active development. The architecture and recipes are in place; `hor
 
 Built by **Hugo Rivera** ([@imhugiok](https://github.com/imhugiok)) — making it easy to build *good* Roblox games with AI. Community, MIT-licensed: use it, fork it, open issues and PRs.
 
+- 🌐 Portfolio **[hugorivera.me](https://hugorivera.me)**
 - 📸 Instagram **[@imhugi.ok](https://instagram.com/imhugi.ok)**
 
 ## License
@@ -329,6 +330,7 @@ Temprano y en desarrollo activo. La arquitectura y las recetas están en su luga
 
 Hecho por **Hugo Rivera** ([@imhugiok](https://github.com/imhugiok)): haciendo fácil construir *buenos* juegos de Roblox con IA. Comunitario, con licencia MIT: úsalo, hazle fork, abre issues y PRs.
 
+- 🌐 Portafolio **[hugorivera.me](https://hugorivera.me)**
 - 📸 Instagram **[@imhugi.ok](https://instagram.com/imhugi.ok)**
 
 ## Licencia
