@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="#readme"><b>🇬🇧 English</b></a>  ·  <a href="#-resumen-español"><b>🇪🇸 Español</b></a>
+  <a href="#readme"><b>🇬🇧 English</b></a>  ·  <a href="#-español"><b>🇪🇸 Español</b></a>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/imhugiok/bloxlab/main/assets/hero.png" alt="BloxLab — quality Roblox game-building skills for Claude Code" width="100%">
+  <img src="https://raw.githubusercontent.com/imhugiok/bloxlab/main/assets/hero.jpg" alt="BloxLab — quality Roblox game-building skills for Claude Code" width="100%">
 </p>
 
 <h1 align="center">BloxLab</h1>
@@ -166,19 +166,156 @@ Built by **Hugo Rivera** ([@imhugiok](https://github.com/imhugiok)) — making i
 
 ---
 
-## 🇪🇸 Resumen (Español)
+## 🇪🇸 Español
 
 <p>
   <a href="#readme">🇬🇧 English</a>  ·  <b>🇪🇸 Español</b>
 </p>
 
-**BloxLab** es un plugin de **Claude Code** con skills que construyen **juegos de Roblox de calidad a partir de un prompt** — sin el look genérico de IA. Escribes algo como `/bloxlab:horror-map`, Claude **te pregunta qué quieres**, y lo construye en tu Roblox Studio abierto.
+<p>
+  <strong>Skills de calidad para construir juegos de Roblox, como plugin de Claude Code.</strong><br>
+  Escribe un prompt y obtén un juego de Roblox real construido en tu Studio, <strong>sin el look genérico de "IA".</strong>
+</p>
 
-- **Cómo funciona:** Claude (cerebro) + el **MCP oficial `Roblox_Studio`** (las manos: ejecuta código, genera mallas/materiales/modelos, busca assets) + los skills de BloxLab (el buen gusto). **Sin API keys** — el cerebro es Claude Code.
-- **Por qué:** la plomería y la generación ya las resuelve Roblox; lo que falta es la **calidad/taste**. Eso es BloxLab.
-- **Requisitos:** Roblox Studio con su MCP activado y conectado a Claude Code + este plugin.
-- **Instalar:** `/plugin marketplace add imhugiok/bloxlab` → `/plugin install bloxlab@bloxlab` → `/reload-plugins`.
-- **Usar:** abre Studio en un lugar de prueba y corre, p. ej., `/bloxlab:horror-map`. Cada skill **pregunta primero** (ya tengo idea / un tema / lluvia de ideas / sorpréndeme / solo probando / planear) y **se autorrevisa con capturas** antes de terminar.
-- **14 skills:** terror, backrooms, obby, tycoon, simulator (incl. brainrot), shooter, tower-defense, survival, racing, roleplay-town, escape-room + sistemas (game-ui, key-door-monster, npc).
+> **El engine está resuelto, el taste no.** Roblox ya trae un asistente de IA propio y un MCP oficial que ejecuta código, genera mallas/materiales y busca assets. Lo que *no* sabe hacer es que el resultado se vea diseñado. BloxLab es esa **capa de calidad** que falta.
 
-Regla anti-slop en [`knowledge/anti-ai-slop.md`](knowledge/anti-ai-slop.md). Hecho con cariño por Hugo. MIT.
+---
+
+## Galería
+
+Output real, construido en vivo en Studio a través de los skills. El punto no es el engine, es que el resultado se ve **diseñado**, y la UI está **adaptada al género** en lugar de un único look genérico de "IA".
+
+**Mundos: la capa de calidad**
+
+| Terror | Backrooms | Obby |
+|---|---|---|
+| ![Mapa de terror metro abandonado](assets/world-horror-metro.png) | ![Nivel liminal backrooms](assets/world-backrooms.png) | ![Obby neón](assets/world-obby.png) |
+
+**UI adaptada al género** (no UI genérica de IA)
+
+| Tienda de mascotas juguetona | Diálogo de terror frío | HUD de FPS competitivo |
+|---|---|---|
+| ![UI de tienda de mascotas](assets/ui-shop-playful.png) | ![UI de diálogo de terror frío](assets/ui-horror-dialogue.png) | ![HUD de FPS competitivo](assets/ui-fps.png) |
+
+| HUD brainrot | Party frames cooperativo | Splash de dinero (juice) |
+|---|---|---|
+| ![HUD meme brainrot](assets/ui-brainrot.png) | ![HUD cooperativo](assets/ui-coop.png) | ![Splash de monedas](assets/ui-shop-splash.png) |
+
+> El mismo plugin, seis géneros. La tienda chunky, la caja de terror monospace fría, el HUD angular de FPS y la pantalla caótica de brainrot son todos `game-ui`: lee el género primero.
+
+---
+
+## Por qué
+
+El constructor de IA nativo de Roblox (y su MCP oficial `Roblox_Studio`) ya resuelven la plomería, y las partes generativas (mallas, materiales, modelos 3D) corren en la nube de Roblox, así que ninguna herramienta de terceros les gana ahí. La brecha es el **taste**: el output nativo se ve genérico y de plantilla.
+
+BloxLab no reconstruye el engine. Agrega **conocimiento de game design por género** + un **checklist anti-AI-slop** + una receta de construcción, para que lo que se construye se vea intencional, no autogenerado.
+
+```text
+Tú (un prompt en Claude Code)
+   → Claude            el cerebro
+   → MCP Roblox_Studio las manos (ejecuta código · genera · busca assets)
+   → skills de BloxLab el taste (cómo hacerlo realmente bueno)
+   → tu Roblox Studio abierto
+```
+
+Sin API keys: el cerebro es Claude Code.
+
+## Requisitos
+
+1. **Roblox Studio** con su MCP activado: *Assistant → MCP Servers → "Enable Studio as MCP server"*, conectado a Claude Code vía Quick Connect.
+2. **Claude Code** con el MCP oficial `Roblox_Studio` conectado (los skills llaman a sus tools).
+3. Este plugin instalado (abajo).
+
+## Instalar
+
+**Como plugin de Claude Code:**
+
+```text
+/plugin marketplace add imhugiok/bloxlab
+/plugin install bloxlab@bloxlab
+/reload-plugins
+```
+
+Desarrollo local (desde una carpeta clonada o de trabajo):
+
+```text
+/plugin marketplace add <ruta-a-esta-carpeta>
+/plugin install bloxlab@bloxlab
+/reload-plugins
+```
+
+## Uso
+
+Abre Roblox Studio en un **lugar de prueba**, y en Claude Code corre cualquier skill:
+
+```text
+/bloxlab:horror-map
+/bloxlab:backrooms
+/bloxlab:obby
+```
+
+Cada skill **pregunta primero qué quieres**, y luego construye y **se autorrevisa con capturas** antes de darse por terminado.
+
+## Cómo funciona
+
+Un skill es una receta que Claude sigue. Cada uno:
+
+1. **Pregunta primero (intake)**: nunca construye a ciegas. Tú eliges: *ya tengo una idea · un tema · lluvia de ideas · sorpréndeme · solo probando · planear primero*.
+2. **Construye con el MCP oficial**: blockout, atmósfera/sistemas, detallado, scripts.
+3. **Se autorrevisa**: toma un `screen_capture`, lo critica contra el checklist anti-AI-slop, corrige, repite.
+
+Las reglas compartidas viven en [`knowledge/`](knowledge/): [`anti-ai-slop.md`](knowledge/anti-ai-slop.md) e [`intake.md`](knowledge/intake.md).
+
+## Skills
+
+**Modos de juego**
+
+| Skill | Construye |
+|---|---|
+| `horror-map` | Sección de mapa de terror con atmósfera real |
+| `backrooms` | Espacio liminal, infinito, de fluorescente enfermizo |
+| `obby` | Carrera de obstáculos justa con checkpoints |
+| `tycoon` | Bucle comprar → producir → crecer dinero |
+| `simulator` | Bucle de recolectar/grindear, zonas, mascotas (incl. brainrot) |
+| `shooter` | Mapa de combate con flujo real (+ disparo opcional) |
+| `tower-defense` | Oleadas por un camino, torres con roles |
+| `survival` | Recolectar / craftear / sobrevivir, tensión y alivio |
+| `racing` | Pista con trazado real, vueltas, checkpoints |
+| `roleplay-town` | Un pueblo/ciudad que se siente habitado |
+| `escape-room` | Puzzles justos y encadenados |
+
+**Sistemas (para cualquier juego)**
+
+| Skill | Agrega |
+|---|---|
+| `game-ui` | HUD / menús / tiendas / diálogos que no se ven genéricos |
+| `key-door-monster` | Bucle de objetivo: llaves, puertas, amenaza, meta |
+| `npc` | NPCs con comportamiento creíble |
+
+## La regla anti-AI-slop
+
+Cada skill sigue la misma barra de calidad ([lista completa](knowledge/anti-ai-slop.md)): matar la uniformidad (nada de grids perfectos), atmósfera antes que cantidad de objetos, paleta intencional (`Color3`, no el `BrickColor` por defecto), escala humana, imperfección intencional, sonido y movimiento, y una autorrevisión obligatoria con captura antes de "listo".
+
+## Estructura del proyecto
+
+```text
+.claude-plugin/   plugin.json + marketplace.json
+skills/           14 skills → /bloxlab:<nombre>
+knowledge/        anti-ai-slop.md, intake.md (reglas compartidas)
+docs/             notas de diseño (quality-layer-plan.md)
+```
+
+## Estado
+
+Temprano y en desarrollo activo. La arquitectura y las recetas están en su lugar; `horror-map`, `backrooms` y `obby` se han probado en vivo en Studio (y las recetas se endurecieron con lo que se rompió), el resto se está validando. Honesto por diseño: los skills no inventan IDs de assets ni sonidos, y se detienen de forma segura en vez de romper tu escena. Feedback, issues y PRs bienvenidos, ve [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Acerca de
+
+Hecho por **Hugo Rivera** ([@imhugiok](https://github.com/imhugiok)): haciendo fácil construir *buenos* juegos de Roblox con IA. Comunitario, con licencia MIT: úsalo, hazle fork, abre issues y PRs.
+
+- 📸 Instagram **[@imhugi.ok](https://instagram.com/imhugi.ok)**
+
+## Licencia
+
+[MIT](LICENSE).
