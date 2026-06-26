@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="#readme"><b>🇬🇧 English</b></a>  ·  <a href="#-español"><b>🇪🇸 Español</b></a>
+  <a href="#readme"><b>EN</b></a>  ·  <a href="#-español"><b>ES</b></a>
 </p>
 
 <p align="center">
@@ -19,6 +19,7 @@
   <img src="https://img.shields.io/badge/Roblox-Studio%20MCP-00a2ff.svg" alt="Roblox Studio MCP">
   <img src="https://img.shields.io/badge/no-AI--slop-2ea44f.svg" alt="No AI-slop">
   <img src="https://img.shields.io/badge/skills-14-7c5cff.svg" alt="14 skills">
+  <img src="https://img.shields.io/badge/works%20with-any%20MCP%20agent-444.svg" alt="Works with any MCP-capable agent">
 </p>
 
 > **The engine is solved — taste isn't.** Roblox already ships a first-party AI assistant and an official MCP that can run code, generate meshes/materials, and search assets. What it *can't* do is make the result feel designed. BloxLab is that missing **quality layer**.
@@ -67,9 +68,16 @@ No API keys required — Claude Code is the brain.
 
 ## Requirements
 
-1. **Roblox Studio** with its MCP enabled: *Assistant → MCP Servers → "Enable Studio as MCP server"*, connected to Claude Code via Quick Connect.
-2. **Claude Code** with the official `Roblox_Studio` MCP connected (the skills call its tools).
-3. This plugin installed (below).
+1. **Roblox Studio** with its MCP enabled: *Assistant → MCP Servers → "Enable Studio as MCP server"*, connected to your agent via Quick Connect.
+2. **An MCP-capable agent** with the official `Roblox_Studio` MCP connected (the skills call its tools).
+3. The skills available to that agent (install or point at them, below).
+
+## Compatibility
+
+BloxLab ships as a **Claude Code plugin**, but it isn't locked to it. The hands are the **official `Roblox_Studio` MCP** — a standard MCP server — and the skills are plain Markdown recipes. So you can use BloxLab from **any MCP-capable agent**: Claude Code, Claude Desktop, Cursor, Codex, and more.
+
+- **Claude Code** — one-command plugin install (below), then `/bloxlab:<skill>`.
+- **Other MCP clients (Cursor, Codex, Claude Desktop, ...)** — connect the `Roblox_Studio` MCP and point the agent at the skill you want (`skills/<name>/SKILL.md`). No install step needed to run a recipe.
 
 ## Install
 
@@ -169,7 +177,7 @@ Built by **Hugo Rivera** ([@imhugiok](https://github.com/imhugiok)) — making i
 ## 🇪🇸 Español
 
 <p>
-  <a href="#readme">🇬🇧 English</a>  ·  <b>🇪🇸 Español</b>
+  <a href="#readme">EN</a>  ·  <b>ES</b>
 </p>
 
 <p>
@@ -223,9 +231,16 @@ Sin API keys: el cerebro es Claude Code.
 
 ## Requisitos
 
-1. **Roblox Studio** con su MCP activado: *Assistant → MCP Servers → "Enable Studio as MCP server"*, conectado a Claude Code vía Quick Connect.
-2. **Claude Code** con el MCP oficial `Roblox_Studio` conectado (los skills llaman a sus tools).
-3. Este plugin instalado (abajo).
+1. **Roblox Studio** con su MCP activado: *Assistant → MCP Servers → "Enable Studio as MCP server"*, conectado a tu agente vía Quick Connect.
+2. **Un agente compatible con MCP** con el MCP oficial `Roblox_Studio` conectado (los skills llaman a sus tools).
+3. Los skills disponibles para ese agente (instálalos o apúntalo a ellos, abajo).
+
+## Compatibilidad
+
+BloxLab se distribuye como **plugin de Claude Code**, pero no está atado a él. Las manos son el **MCP oficial `Roblox_Studio`** (un servidor MCP estándar) y los skills son recetas en Markdown. Así que puedes usar BloxLab desde **cualquier agente compatible con MCP**: Claude Code, Claude Desktop, Cursor, Codex y más.
+
+- **Claude Code** — instalación del plugin en un comando (abajo), luego `/bloxlab:<skill>`.
+- **Otros clientes MCP (Cursor, Codex, Claude Desktop, ...)** — conecta el MCP `Roblox_Studio` y apunta el agente al skill que quieras (`skills/<nombre>/SKILL.md`). No hace falta instalar nada para correr una receta.
 
 ## Instalar
 
