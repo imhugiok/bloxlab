@@ -1,4 +1,8 @@
 <p align="center">
+  <a href="#readme"><b>🇬🇧 English</b></a>  ·  <a href="#-resumen-español"><b>🇪🇸 Español</b></a>
+</p>
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/imhugiok/bloxlab/main/assets/hero.svg" alt="Bloxlab — quality Roblox game-building skills for Claude Code" width="840">
 </p>
 
@@ -18,8 +22,6 @@
 </p>
 
 > **The engine is solved — taste isn't.** Roblox already ships a first-party AI assistant and an official MCP that can run code, generate meshes/materials, and search assets. What it *can't* do is make the result feel designed. Bloxlab is that missing **quality layer**.
-
-🇪🇸 *Resumen en español al final.*
 
 ---
 
@@ -165,6 +167,10 @@ Built by **Hugo Rivera** ([@imhugiok](https://github.com/imhugiok)) — making i
 ---
 
 ## 🇪🇸 Resumen (Español)
+
+<p>
+  <a href="#readme">🇬🇧 English</a>  ·  <b>🇪🇸 Español</b>
+</p>
 
 **Bloxlab** es un plugin de **Claude Code** con skills que construyen **juegos de Roblox de calidad a partir de un prompt** — sin el look genérico de IA. Escribes algo como `/bloxlab:horror-map`, Claude **te pregunta qué quieres**, y lo construye en tu Roblox Studio abierto.
 
